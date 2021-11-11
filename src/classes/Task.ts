@@ -8,6 +8,10 @@ class Task {
   public getStatus(): boolean {
     return this.status
   }
+
+  public setStatus(value: boolean) {
+    this.status = false
+  }
 }
 
 export default Task
