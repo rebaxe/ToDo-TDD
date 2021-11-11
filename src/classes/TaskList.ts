@@ -8,7 +8,7 @@ class TaskList {
   }
 
   public addTask(task: Task) {
-    this.tasks.push()
+    this.tasks.push(task)
   }
 }
 
