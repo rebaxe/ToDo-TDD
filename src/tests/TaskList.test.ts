@@ -17,7 +17,7 @@ describe('Task list tests', () => {
   test('TC2b. Add task to list', () => {
     const tasklist = new TaskList()
     const task = new StubTask('Water plants', false)
-    tasklist.addTask(task)
+    tasklist.add(task)
     const list = tasklist.getTasks()
     expect(list[0].getDescription()).toBe('Water plants')
   })
