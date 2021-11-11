@@ -5,9 +5,8 @@ class Task {
     return this.description
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public getStatus(): boolean {
-    return true
+    return this.status
   }
 }
 
