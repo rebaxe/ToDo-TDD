@@ -21,4 +21,12 @@ describe('Task list tests', () => {
     const list = tasklist.getTasks()
     expect(list[0].getDescription()).toBe('Water plants')
   })
+  test('TC2c. Delete task from list', () => {
+    const tasklist = new TaskList()
+    const task = new StubTask('Water plants', false)
+    tasklist.add(task)
+    tasklist.delete(task)
+    const list = tasklist.getTasks()
+    expect(list.length).toEqual(0)
+  })
 })

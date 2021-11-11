@@ -10,6 +10,10 @@ class TaskList {
   public add(task: Task) {
     this.tasks.push(task)
   }
+
+  public delete(task: Task) {
+    this.tasks.slice()
+  }
 }
 
 export default TaskList
