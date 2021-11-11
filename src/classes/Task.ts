@@ -4,6 +4,11 @@ class Task {
   public getDescription(): string {
     return this.description
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  public getStatus(): boolean {
+    return true
+  }
 }
 
 export default Task
