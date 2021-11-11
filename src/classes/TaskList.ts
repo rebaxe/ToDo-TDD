@@ -6,6 +6,10 @@ class TaskList {
   public getTasks(): Task[] {
     return this.tasks
   }
+
+  public addTask(task: Task) {
+    this.tasks.push()
+  }
 }
 
 export default TaskList
