@@ -11,8 +11,9 @@ class TaskList {
     this.tasks.push(task)
   }
 
-  public delete(task: Task) {
-    this.tasks.slice()
+  public delete(taskToDelete: Task) {
+    const index = this.tasks.indexOf(taskToDelete)
+    this.tasks.splice(index, 1)
   }
 }
 
