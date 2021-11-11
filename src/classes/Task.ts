@@ -10,7 +10,7 @@ class Task {
   }
 
   public setStatus(value: boolean) {
-    this.status = false
+    this.status = value
   }
 }
 
