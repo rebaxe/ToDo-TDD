@@ -1,5 +1,5 @@
 import FinishedTaskList from './FinishedTaskList'
-// import PointCounter from './PointCounter'
+import PointCounter from './PointCounter'
 import UnfinishedTaskList from './UnfinishedTaskList'
 
 class ToDo {
@@ -7,7 +7,10 @@ class ToDo {
 
   private finishedTaskList = new FinishedTaskList()
 
-  // private pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
+  private pointCounter = new PointCounter(
+    this.unfinishedTaskList.getPoints(),
+    this.finishedTaskList.getPoints()
+  )
 
   getUnFinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
@@ -17,9 +20,10 @@ class ToDo {
     return this.finishedTaskList
   }
 
-  // getPointCounter(): PointCounter {
-  //   return this.pointCounter
-  // }
+  // eslint-disable-next-line class-methods-use-this
+  getPointCounter(): any {
+    return ''
+  }
 }
 
 export default ToDo

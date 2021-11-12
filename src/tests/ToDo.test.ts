@@ -1,4 +1,5 @@
 import FinishedTaskList from '../classes/FinishedTaskList'
+import PointCounter from '../classes/PointCounter'
 import ToDo from '../classes/ToDo'
 import UnfinishedTaskList from '../classes/UnfinishedTaskList'
 
@@ -12,5 +13,9 @@ describe('ToDo tests', () => {
   test('TC6b. Get list of finished tasks', () => {
     const finishedTaskList = todo.getFinishedTasks()
     expect(finishedTaskList instanceof FinishedTaskList).toBeTruthy()
+  })
+  test('TC6c. Get instance of point counter', () => {
+    const pointCounter = todo.getPointCounter()
+    expect(pointCounter instanceof PointCounter).toBeTruthy()
   })
 })

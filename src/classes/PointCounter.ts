@@ -1,6 +1,12 @@
+import Point from './Point'
+
 class PointCounter {
-  //   maxPoints: number
-  //   finishedPoints: number
+  constructor(private unfinishedPoints: Point[], private finishedPoints: Point[]) {}
+
+  // eslint-disable-next-line class-methods-use-this
+  public calculateMaxPoint(): number {
+    return 0
+  }
 }
 
 export default PointCounter
