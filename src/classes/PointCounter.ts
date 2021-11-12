@@ -8,7 +8,7 @@ class PointCounter {
   }
 
   public getFinishedPoints(): number {
-    return 0
+    return this.calculateFinishedPoints()
   }
 
   private calculateFinishedPoints() {
