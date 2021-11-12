@@ -1,5 +1,7 @@
+import Point from './Point'
+
 class Task {
-  constructor(readonly description: string, private status: boolean) {}
+  constructor(private description: string, private status: boolean, private complexity: Point) {}
 
   public getDescription(): string {
     return this.description
@@ -11,6 +13,11 @@ class Task {
 
   public setStatus(value: boolean) {
     this.status = value
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  public getComplexity(): any {
+    return 0
   }
 }
 
