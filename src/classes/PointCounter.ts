@@ -3,16 +3,8 @@ import Point from './Point'
 class PointCounter {
   constructor(private unfinishedPoints: Point[], private finishedPoints: Point[]) {}
 
-  // eslint-disable-next-line class-methods-use-this
   public getMaxPoints(): number {
-    return this.calculateMaxPoints()
-  }
-
-  private calculateMaxPoints(): number {
-    let maxPoints = 0
-    maxPoints = this.calculateUnfinishedPoints()
-    maxPoints += this.calculateFinishedPoints()
-    return maxPoints
+    return this.calculateUnfinishedPoints() + this.calculateFinishedPoints()
   }
 
   public calculateFinishedPoints() {
