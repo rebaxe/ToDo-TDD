@@ -2,12 +2,7 @@ import EasyPoint from '../classes/EasyPoint'
 import Point from '../classes/Point'
 import Task from '../classes/Task'
 
-class StubPoint extends EasyPoint {
-  // eslint-disable-next-line class-methods-use-this
-  getPoint() {
-    return 1
-  }
-}
+class StubPoint extends EasyPoint {}
 
 const stubPoint = new StubPoint()
 const task = new Task('Water plants', false, stubPoint)
