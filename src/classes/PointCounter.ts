@@ -11,6 +11,11 @@ class PointCounter {
     return this.calculateFinishedPoints()
   }
 
+  public getProgress(): number {
+    return 0.2
+    // return this.calculateFinishedPoints() / this.getMaxPoints()
+  }
+
   private calculateFinishedPoints() {
     let points = 0
     this.finishedPoints.forEach(point => {
