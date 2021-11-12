@@ -1,4 +1,5 @@
 import FinishedTaskList from './FinishedTaskList'
+// import PointCounter from './PointCounter'
 import UnfinishedTaskList from './UnfinishedTaskList'
 
 class ToDo {
@@ -6,7 +7,7 @@ class ToDo {
 
   private finishedTaskList = new FinishedTaskList()
 
-  // pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
+  // private pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
 
   getUnFinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
@@ -15,6 +16,10 @@ class ToDo {
   getFinishedTasks(): FinishedTaskList {
     return this.finishedTaskList
   }
+
+  // getPointCounter(): PointCounter {
+  //   return this.pointCounter
+  // }
 }
 
 export default ToDo
