@@ -20,9 +20,8 @@ class ToDo {
     return this.finishedTaskList
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  getPointCounter(): any {
-    return ''
+  getPointCounter(): PointCounter {
+    return this.pointCounter
   }
 }
 
