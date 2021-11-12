@@ -5,7 +5,7 @@ const todo = new ToDo()
 
 describe('ToDo tests', () => {
   test('TC6a. Get list of unfinished tasks', () => {
-    const unfinishedTaskList = todo.getUnFinishedTasks
+    const unfinishedTaskList = todo.getUnFinishedTasks()
     expect(unfinishedTaskList instanceof UnfinishedTaskList).toBeTruthy()
   })
 })
