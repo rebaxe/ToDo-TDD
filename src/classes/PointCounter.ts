@@ -4,7 +4,7 @@ class PointCounter {
   constructor(private unfinishedPoints: Point[], private finishedPoints: Point[]) {}
 
   // eslint-disable-next-line class-methods-use-this
-  public calculateMaxPoint(): number {
+  public getMaxPoints(): number {
     return 0
   }
 }
