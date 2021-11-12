@@ -15,9 +15,8 @@ class Task {
     this.status = value
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  public getComplexity(): any {
-    return 0
+  public getComplexity(): Point {
+    return this.complexity
   }
 }
 
