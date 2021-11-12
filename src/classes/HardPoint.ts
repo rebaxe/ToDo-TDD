@@ -5,7 +5,7 @@ class HardPoint implements Point {
   private point = 3
 
   getPoint(): number {
-    return 876
+    return this.point
   }
 }
 
