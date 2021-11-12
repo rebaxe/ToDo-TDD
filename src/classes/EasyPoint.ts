@@ -5,7 +5,7 @@ class EasyPoint implements Point {
   private point = 1
 
   getPoint(): number {
-    return 1
+    return this.point
   }
 }
 
