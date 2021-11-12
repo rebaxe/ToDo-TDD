@@ -30,4 +30,7 @@ describe('Point counter tests', () => {
   test('TC7a. Get max points', () => {
     expect(pointCounter.getMaxPoints()).toBe(6)
   })
+  test('TC7b. Get finished points', () => {
+    expect(pointCounter.getFinishedPoints()).toBe(3)
+  })
 })

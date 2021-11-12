@@ -7,7 +7,11 @@ class PointCounter {
     return this.calculateUnfinishedPoints() + this.calculateFinishedPoints()
   }
 
-  public calculateFinishedPoints() {
+  public getFinishedPoints(): number {
+    return 0
+  }
+
+  private calculateFinishedPoints() {
     let points = 0
     this.finishedPoints.forEach(point => {
       points += point.getPoint()
