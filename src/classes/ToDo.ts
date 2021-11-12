@@ -4,13 +4,13 @@ import Task from './Task'
 import UnfinishedTaskList from './UnfinishedTaskList'
 
 class ToDo {
-  // private unfinishedTaskList = new UnfinishedTaskList()
+  private unfinishedTaskList = new UnfinishedTaskList()
 
-  // private finishedTaskList = new FinishedTaskList()
-  constructor(
-    private unfinishedTaskList: UnfinishedTaskList,
-    private finishedTaskList: FinishedTaskList
-  ) {}
+  private finishedTaskList = new FinishedTaskList()
+  // constructor(
+  //   private unfinishedTaskList: UnfinishedTaskList,
+  //   private finishedTaskList: FinishedTaskList
+  // ) {}
 
   private pointCounter = new PointCounter(
     this.unfinishedTaskList.getPoints(),
