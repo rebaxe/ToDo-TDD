@@ -34,6 +34,6 @@ describe('Point counter tests', () => {
     expect(pointCounter.getFinishedPoints()).toBe(3)
   })
   test('TC7c. Get progress', () => {
-    expect(pointCounter.getProgress).toBe(0.5)
+    expect(pointCounter.getProgress()).toBe(0.5)
   })
 })

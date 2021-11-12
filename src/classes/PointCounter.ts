@@ -12,8 +12,7 @@ class PointCounter {
   }
 
   public getProgress(): number {
-    return 0.2
-    // return this.calculateFinishedPoints() / this.getMaxPoints()
+    return this.calculateFinishedPoints() / this.getMaxPoints()
   }
 
   private calculateFinishedPoints() {
