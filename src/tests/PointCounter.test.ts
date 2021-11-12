@@ -28,6 +28,6 @@ const pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTa
 
 describe('Point counter tests', () => {
   test('TC7a. Get max points', () => {
-    expect(pointCounter.getMaxPoints()).toBe(3)
+    expect(pointCounter.getMaxPoints()).toBe(6)
   })
 })
