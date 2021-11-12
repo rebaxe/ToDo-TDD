@@ -5,7 +5,7 @@ class MediumPoint implements Point {
   private point = 2
 
   getPoint(): number {
-    return 1
+    return this.point
   }
 }
 
