@@ -1,5 +1,5 @@
 import TaskList from './TaskList'
 
-class FinishedTaskList {}
+class FinishedTaskList extends TaskList {}
 
 export default FinishedTaskList
