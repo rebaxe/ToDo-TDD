@@ -11,6 +11,10 @@ class ToDo {
   getUnFinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
   }
+
+  getFinishedTasks(): FinishedTaskList {
+    return this.finishedTaskList
+  }
 }
 
 export default ToDo
