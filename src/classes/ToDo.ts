@@ -4,18 +4,15 @@ import Task from './Task'
 import UnfinishedTaskList from './UnfinishedTaskList'
 
 class ToDo {
-  private unfinishedTaskList = new UnfinishedTaskList()
+  constructor(
+    private unfinishedTaskList: UnfinishedTaskList,
+    private finishedTaskList: FinishedTaskList
+  ) {}
 
-  private finishedTaskList = new FinishedTaskList()
-  // constructor(
-  //   private unfinishedTaskList: UnfinishedTaskList,
-  //   private finishedTaskList: FinishedTaskList
-  // ) {}
-
-  private pointCounter = new PointCounter(
-    this.unfinishedTaskList.getPoints(),
-    this.finishedTaskList.getPoints()
-  )
+  // private pointCounter = new PointCounter(
+  //   this.unfinishedTaskList.getPoints(),
+  //   this.finishedTaskList.getPoints()
+  // )
 
   public getUnFinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
@@ -25,17 +22,17 @@ class ToDo {
     return this.finishedTaskList
   }
 
-  public getPointCounter(): PointCounter {
-    return this.pointCounter
-  }
+  // public getPointCounter(): PointCounter {
+  //   return this.pointCounter
+  // }
 
   public toggleStatus(task: Task) {
     if (task.getStatus()) {
-      // task.setStatus(false)
-      // this.moveToUnfinishedList(task)
+      task.setStatus(false)
+      this.moveToUnfinishedList(task)
     } else {
-      //task.setStatus(true)
-      // this.moveToFinishedList(task)
+      task.setStatus(true)
+      this.moveToFinishedList(task)
     }
   }
 
