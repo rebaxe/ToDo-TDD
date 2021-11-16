@@ -7,30 +7,9 @@ import Task from '../classes/Task'
 import EasyPoint from '../classes/EasyPoint'
 
 beforeEach(() => {
-  jest.mock('../classes/UnfinishedTaskList', () => {
-    return jest.fn().mockImplementation(() => {
-      return {
-        add: jest.fn(),
-        delete: jest.fn()
-      }
-    })
-  })
-  jest.mock('../classes/FinishedTaskList', () => {
-    return jest.fn().mockImplementation(() => {
-      return {
-        add: jest.fn(),
-        delete: jest.fn()
-      }
-    })
-  })
-  jest.mock('../classes/Task', () => {
-    return jest.fn(() => {
-      return {
-        getStatus: jest.fn(),
-        setStatus: jest.fn()
-      }
-    })
-  })
+  jest.mock('../classes/UnfinishedTaskList')
+  jest.mock('../classes/FinishedTaskList')
+  jest.mock('../classes/Task')
   jest.mock('../classes/EasyPoint.ts')
 })
 
