@@ -6,13 +6,9 @@ import UnfinishedTaskList from './UnfinishedTaskList'
 class ToDo {
   constructor(
     private unfinishedTaskList: UnfinishedTaskList,
-    private finishedTaskList: FinishedTaskList
+    private finishedTaskList: FinishedTaskList,
+    private pointCounter: PointCounter
   ) {}
-
-  // private pointCounter = new PointCounter(
-  //   this.unfinishedTaskList.getPoints(),
-  //   this.finishedTaskList.getPoints()
-  // )
 
   public getUnFinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
