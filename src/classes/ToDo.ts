@@ -18,9 +18,9 @@ class ToDo {
     return this.finishedTaskList
   }
 
-  // public getPointCounter(): PointCounter {
-  //   return this.pointCounter
-  // }
+  public getPointCounter(): PointCounter {
+    return this.pointCounter
+  }
 
   public toggleStatus(task: Task) {
     if (task.getStatus()) {
