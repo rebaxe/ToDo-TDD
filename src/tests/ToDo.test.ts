@@ -5,15 +5,18 @@ import UnfinishedTaskList from '../classes/UnfinishedTaskList'
 import ToDo from '../classes/ToDo'
 import Task from '../classes/Task'
 import EasyPoint from '../classes/EasyPoint'
+import PointCounter from '../classes/PointCounter'
 
 jest.mock('../classes/Task')
 jest.mock('../classes/UnfinishedTaskList')
 jest.mock('../classes/FinishedTaskList')
 jest.mock('../classes/EasyPoint.ts')
+jest.mock('../classes/PointCounter.ts')
 
 const unfinishedTaskList = new UnfinishedTaskList()
 const finishedTaskList = new FinishedTaskList()
-const toDo = new ToDo(unfinishedTaskList, finishedTaskList)
+const pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
+const toDo = new ToDo(unfinishedTaskList, finishedTaskList, pointCounter)
 const task = new Task('test task', false, new EasyPoint())
 
 beforeEach(() => {
@@ -44,5 +47,9 @@ describe('ToDo tests', () => {
     expect(spyDelete).toHaveBeenCalledWith(task)
     expect(spyAdd).toHaveBeenCalledTimes(1)
     expect(spyDelete).toHaveBeenCalledTimes(1)
+  })
+  it('TC6c. Get a point counter', () => {
+    const counter = toDo.getPointCounter()
+    expect(counter instanceof PointCounter).toBeTruthy()
   })
 })
