@@ -24,7 +24,7 @@ beforeEach(() => {
 })
 
 describe('ToDo tests', () => {
-  it('TC6a. Mark task as finished', () => {
+  it('TC6a. Mark task as finished calls correct methods on lists', () => {
     jest.spyOn(task, 'getStatus').mockImplementation(() => false)
     const spyAdd = jest.spyOn(finishedTaskList, 'add')
     const spyDelete = jest.spyOn(unfinishedTaskList, 'delete')
@@ -36,7 +36,7 @@ describe('ToDo tests', () => {
     expect(spyAdd).toHaveBeenCalledTimes(1)
     expect(spyDelete).toHaveBeenCalledTimes(1)
   })
-  it('TC6b. Mark task as unfinished', () => {
+  it('TC6b. Mark task as unfinished calls correct methods on lists', () => {
     jest.spyOn(task, 'getStatus').mockImplementation(() => true)
     const spyAdd = jest.spyOn(unfinishedTaskList, 'add')
     const spyDelete = jest.spyOn(finishedTaskList, 'delete')
@@ -48,7 +48,7 @@ describe('ToDo tests', () => {
     expect(spyAdd).toHaveBeenCalledTimes(1)
     expect(spyDelete).toHaveBeenCalledTimes(1)
   })
-  it('TC6c. Get a point counter', () => {
+  it('TC6c. Get instance of a point counter', () => {
     const counter = toDo.getPointCounter()
     expect(counter instanceof PointCounter).toBeTruthy()
   })
