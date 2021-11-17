@@ -15,9 +15,9 @@ class TodoFactory {
 
   private toDo = new ToDo(this.unfinishedTaskList, this.finishedTaskList, this.pointCounter)
 
-  // public getToDo(): ToDo {
-  //   return this.toDo
-  // }
+  public getToDo(): ToDo {
+    return this.toDo
+  }
 }
 
 export default TodoFactory
