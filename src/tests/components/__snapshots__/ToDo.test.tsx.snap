@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`To Do component Should render the to do component 1`] = `ShallowWrapper {}`;
+exports[`To Do component Should render the to do component 1`] = `
+Array [
+  <div>
+    <h1>
+      Fun To Do
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        name="todo"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Add
+      </button>
+    </form>
+  </div>,
+]
+`;
+
