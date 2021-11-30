@@ -31,4 +31,9 @@ describe('To Do component', () => {
     const updatedState = simulateInputChange(todo, '#add-input', 'new task')
     expect(updatedState.props().value).toEqual('new task')
   })
+
+  it('Should reset input field after clicking on button', () => {
+    const updatedInput = simulateInputChange(todo, '#add-input', 'new task')
+    expect(updatedInput.props().value).toEqual('')
+  })
 })
