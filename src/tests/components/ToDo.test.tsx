@@ -24,6 +24,6 @@ describe('To Do component', () => {
 
   it('Should render an empty input field', () => {
     const input = todo.find('input')
-    expect(input.props()).toBe('')
+    expect(input.props().value).toBe('')
   })
 })
