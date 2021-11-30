@@ -10,12 +10,14 @@ Array [
       onSubmit={[Function]}
     >
       <input
+        id="add-input"
         name="todo"
         onChange={[Function]}
         type="text"
         value=""
       />
       <button
+        id="add-btn"
         type="submit"
       >
         Add
@@ -24,4 +26,3 @@ Array [
   </div>,
 ]
 `;
-
