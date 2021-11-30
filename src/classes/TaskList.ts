@@ -2,7 +2,7 @@ import Point from './Point'
 import Task from './Task'
 
 class TaskList {
-  private tasks: Task[] = []
+  readonly tasks: Task[] = []
 
   public getTasks(): Task[] {
     return this.tasks
