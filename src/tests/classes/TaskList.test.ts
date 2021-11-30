@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
-import EasyPoint from '../classes/EasyPoint'
-import Point from '../classes/Point'
-import Task from '../classes/Task'
-import TaskList from '../classes/TaskList'
+import EasyPoint from '../../classes/EasyPoint'
+import Point from '../../classes/Point'
+import Task from '../../classes/Task'
+import TaskList from '../../classes/TaskList'
 
 class StubTask extends Task {
   getDescription() {

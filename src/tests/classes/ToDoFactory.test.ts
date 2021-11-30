@@ -1,5 +1,5 @@
-import ToDo from '../classes/ToDo'
-import ToDoFactory from '../classes/ToDoFactory'
+import ToDo from '../../classes/ToDo'
+import ToDoFactory from '../../classes/ToDoFactory'
 
 describe('To Do factory tests', () => {
   test('TC8a. Get instance of to do', () => {

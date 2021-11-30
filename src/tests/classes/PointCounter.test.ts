@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
-import EasyPoint from '../classes/EasyPoint'
-import FinishedTaskList from '../classes/FinishedTaskList'
-import PointCounter from '../classes/PointCounter'
-import UnfinishedTaskList from '../classes/UnfinishedTaskList'
+import EasyPoint from '../../classes/EasyPoint'
+import FinishedTaskList from '../../classes/FinishedTaskList'
+import PointCounter from '../../classes/PointCounter'
+import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 
 class StubPoint extends EasyPoint {}
 const stubPoint = new StubPoint()

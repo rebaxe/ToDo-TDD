@@ -1,6 +1,6 @@
-import EasyPoint from '../classes/EasyPoint'
-import HardPoint from '../classes/HardPoint'
-import MediumPoint from '../classes/MediumPoint'
+import EasyPoint from '../../classes/EasyPoint'
+import HardPoint from '../../classes/HardPoint'
+import MediumPoint from '../../classes/MediumPoint'
 
 describe('Point tests', () => {
   test('TC5a. Get value from easy point', () => {

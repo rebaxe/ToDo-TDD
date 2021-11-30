@@ -1,6 +1,6 @@
-import EasyPoint from '../classes/EasyPoint'
-import Point from '../classes/Point'
-import Task from '../classes/Task'
+import EasyPoint from '../../classes/EasyPoint'
+import Point from '../../classes/Point'
+import Task from '../../classes/Task'
 
 class StubPoint extends EasyPoint {}
 

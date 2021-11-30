@@ -1,5 +1,5 @@
-import TaskList from '../classes/TaskList'
-import UnfinishedTaskList from '../classes/UnfinishedTaskList'
+import TaskList from '../../classes/TaskList'
+import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 
 describe('Tasklist subclasses', () => {
   test('TC4a. Get task list', () => {
