@@ -26,7 +26,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   background-color: var(--color-bluegray);
-  color: var(--color-darkgray);
+  /* color: var(--color-darkgray); */
+  color: #f4a261;
+
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }

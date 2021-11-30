@@ -9,4 +9,11 @@ describe('To Do component', () => {
     const todo = shallow(<ToDo />)
     expect(todo.getElements()).toMatchSnapshot()
   })
+  it('Should update state on input of new task', () => {
+    const todo = shallow(<ToDo />)
+    const input = todo.find('input')
+    input.simulate('change', { target: { name: 'todo', value: 'New task' } })
+
+    expect(newTask.value).toEqual('New task')
+  })
 })
