@@ -14,13 +14,7 @@ function ToDo(): JSX.Element {
    <div>
      <h1>Fun To Do</h1>
      <form onSubmit={e => addTask(e)}>
-       <input
-         id="add-input"
-         type="text"
-         name="todo"
-         onChange={e => setNewTask(e.target.value)}
-         value={newTask}
-       />
+       <input type="text" name="todo" onChange={e => setNewTask(e.target.value)} value={newTask} />
        <button id="add-btn" type="submit">
          Add
        </button>

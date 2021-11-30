@@ -26,4 +26,9 @@ describe('To Do component', () => {
     const input = todo.find('input')
     expect(input.props().value).toBe('')
   })
+
+  it('Should update state after clicking on button', () => {
+    const updatedState = simulateInputChange(todo, '#add-input', 'new task')
+    expect(updatedState.props().value).toEqual('new task')
+  })
 })

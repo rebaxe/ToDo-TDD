@@ -10,7 +10,6 @@ Array [
       onSubmit={[Function]}
     >
       <input
-        id="add-input"
         name="todo"
         onChange={[Function]}
         type="text"
