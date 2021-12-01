@@ -14,27 +14,8 @@ jest.mock('../../classes/EasyPoint')
 
 const mockTask = new Task('test task', false, new EasyPoint())
 
-// const unfinishedTaskListMock = jest.mock(
-//   '../../classes/UnfinishedTaskList',
-//   () => {
-//     return {
-//       __esModule: true,
-//       getTasks: jest.fn(() => mockTask)
-//     }
-//   },
-//   { virtual: true }
-// )
-
 const mockUnfinishedTaskList = new UnfinishedTaskList()
 let unfinishedTasks: any
-
-// const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) => {
-//   const input = wrapper.find(inputSelector)
-//   input.simulate('change', {
-//     target: { value: newValue }
-//   })
-//   return wrapper.find(inputSelector)
-// }
 
 beforeEach(() => {
   jest.clearAllMocks()

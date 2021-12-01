@@ -1,5 +1,5 @@
 import React from 'react'
-// import Task from './Task'
+import Task from './Task'
 import TaskClass from '../classes/Task'
 
 type Props = {
@@ -14,7 +14,9 @@ function UnfinishedTasks({ unfinishedTaskList }: Props): JSX.Element {
       ) : (
         <ul>
           {unfinishedTaskList.map((task: TaskClass) => (
-            <li>{/* <Task task={task} /> */}</li>
+            <li>
+              <Task task={task} />
+            </li>
           ))}
         </ul>
       )}
