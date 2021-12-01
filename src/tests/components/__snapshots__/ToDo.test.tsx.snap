@@ -29,6 +29,8 @@ Array [
         Easy
         <input
           id="easy"
+          name="point"
+          onChange={[Function]}
           type="radio"
           value="1"
         />
@@ -39,6 +41,8 @@ Array [
         Medium
         <input
           id="medium"
+          name="point"
+          onChange={[Function]}
           type="radio"
           value="2"
         />
@@ -49,6 +53,8 @@ Array [
         Hard
         <input
           id="hard"
+          name="point"
+          onChange={[Function]}
           type="radio"
           value="3"
         />
