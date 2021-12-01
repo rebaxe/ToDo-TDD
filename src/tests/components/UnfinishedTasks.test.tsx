@@ -7,8 +7,6 @@ import Task from '../../classes/Task'
 import UnfinishedTasks from '../../components/UnfinishedTasks'
 
 jest.mock('../../classes/UnfinishedTaskList')
-jest.mock('../../classes/FinishedTaskList')
-jest.mock('../../classes/PointCounter')
 jest.mock('../../classes/Task')
 jest.mock('../../classes/EasyPoint')
 
