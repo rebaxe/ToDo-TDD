@@ -39,10 +39,10 @@ function ToDo(): JSX.Element {
         Medium
         <input type="radio" name="point" id="medium" value="2" onChange={e => handleSelectPoint(e)}/>
       </label>
-      {/* <label htmlFor="hard">
+      <label htmlFor="hard">
         Hard
        <input type="radio" name="point" id="hard" value="3" onChange={e => handleSelectPoint(e)}/>
-      </label> */}
+      </label>
      </form>
    </div>
  )
