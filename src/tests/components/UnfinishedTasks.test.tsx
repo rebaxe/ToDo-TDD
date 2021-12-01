@@ -34,13 +34,14 @@ const mockUnfinishedTaskList = new UnfinishedTaskList()
 
 let unfinishedTasks: any
 
-const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) => {
-  const input = wrapper.find(inputSelector)
-  input.simulate('change', {
-    target: { value: newValue }
-  })
-  return wrapper.find(inputSelector)
-}
+// const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) => {
+//   const input = wrapper.find(inputSelector)
+//   input.simulate('change', {
+//     target: { value: newValue }
+//   })
+//   return wrapper.find(inputSelector)
+// }
+
 beforeEach(() => {
   jest.clearAllMocks()
 })
@@ -52,7 +53,11 @@ describe('To Do component', () => {
     )
   })
 
-  it('Should render the to do component', () => {
-    expect(unfinishedTasks.getElements()).toMatchSnapshot()
+  // it('Should render the to do component', () => {
+  //   expect(unfinishedTasks.getElements()).toMatchSnapshot()
+  // })
+  it('Should render no tasks', () => {
+    const p = unfinishedTasks.find('.noTasks')
+    expect(p.text()).toEqual('No tasks')
   })
 })
