@@ -53,11 +53,13 @@ describe('To Do component', () => {
     )
   })
 
-  // it('Should render the to do component', () => {
-  //   expect(unfinishedTasks.getElements()).toMatchSnapshot()
-  // })
   it('Should render no tasks', () => {
     const p = unfinishedTasks.find('.noTasks')
     expect(p.text()).toEqual('No tasks')
+  })
+
+  it('Should render list with one task', () => {
+    const list = unfinishedTasks.find('ul')
+    expect(list).toHaveLength(1)
   })
 })
