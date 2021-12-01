@@ -14,6 +14,8 @@ function ToDo(): JSX.Element {
    <div>
      <h1>Fun To Do</h1>
      <form onSubmit={e => addTask(e)}>
+       
+      
        <input
          id="add-input"
          type="text"
@@ -25,6 +27,18 @@ function ToDo(): JSX.Element {
        <button id="add-btn" type="submit">
          Add
        </button>
+       <label htmlFor="easy">
+        Easy
+        <input type="radio" id="easy" value="1" />
+      </label>
+      <label htmlFor="medium">
+        Medium
+        <input type="radio" id="medium" value="2"/>
+      </label>
+      <label htmlFor="hard">
+        Hard
+       <input type="radio" id="hard" value="3"/>
+      </label>
      </form>
    </div>
  )
