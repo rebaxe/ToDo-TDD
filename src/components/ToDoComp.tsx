@@ -54,6 +54,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
  return (
    <div>
      <h1>Fun To Do</h1>
+     <UnfinishedTasks unfinishedTaskList={unfinishedTasks} />
      <form onSubmit={e => handleNewTask(e)}>
        <input
          id="add-input"
