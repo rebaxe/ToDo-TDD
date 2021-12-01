@@ -9,7 +9,8 @@ type Props = {
 function UnfinishedTasks({ unfinishedTaskList }: Props): JSX.Element {
   return (
     <>
-      {/* (!unfinishedTaskList || unfinishedTaskList.length === 0) && <p>No tasks</p> : (
+      {
+        (!unfinishedTaskList || unfinishedTaskList.length === 0) && <p>No tasks</p> /*: (
         <ul>
           {unfinishedTaskList.map((task: TaskClass) => (
             <li>
@@ -17,7 +18,8 @@ function UnfinishedTasks({ unfinishedTaskList }: Props): JSX.Element {
             </li>
           ))}
         </ul>
-          ) */}
+          ) */
+      }
     </>
   )
 }
