@@ -1,6 +1,6 @@
 import React from 'react'
 import './global.css'
-import ToDo from './components/ToDo'
+import ToDoComp from './components/ToDoComp'
 import TodoFactory from './classes/ToDoFactory'
 
 function App(): JSX.Element {
@@ -8,7 +8,7 @@ function App(): JSX.Element {
 
   return (
     <>
-      <ToDo todo={todoFactory.getToDo()} />
+      <ToDoComp todo={todoFactory.getToDo()} />
     </>
   )
 }

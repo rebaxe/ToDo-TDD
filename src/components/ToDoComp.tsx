@@ -10,37 +10,37 @@ type Props = {
   todo: ToDoClass
 }
 
-function ToDo({ todo } : Props): JSX.Element {
-  // const unfinishedTaskList = todo.getUnfinishedTasks()
-  // const finishedTaskList = todo.getFinishedTasks()
+function ToDoComp({ todo } : Props): JSX.Element {
+  const unfinishedTaskList = todo.getUnfinishedTasks()
+  const finishedTaskList = todo.getFinishedTasks()
 
   const [taskDescription, setTaskDescription] = useState('')
   const [taskPoint, setTaskPoint] = useState('')
-  // const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.tasks)
+  const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.getTasks())
 
-  // const createPoint = () => {
-  //   if (taskPoint === '1') {
-  //     return new EasyPoint()
-  //   }
-  //   if (taskPoint === '2') {
-  //     return new MediumPoint()
-  //   } 
-  //     return new HardPoint()
-  //   }
+  const createPoint = () => {
+    if (taskPoint === '1') {
+      return new EasyPoint()
+    }
+    if (taskPoint === '2') {
+      return new MediumPoint()
+    } 
+      return new HardPoint()
+    }
 
-  // const addPoint = () => {
-  //   if (taskPoint) {
-  //     const point = createPoint()
-  //     const task = new TaskClass(taskDescription, false, point)
-  //     unfinishedTaskList.add(task)
-  //     setUnfinishedTasks([...unfinishedTaskList.tasks])
-  //   }
-  // }
+  const addPoint = () => {
+    if (taskPoint) {
+      const point = createPoint()
+      const task = new TaskClass(taskDescription, false, point)
+      unfinishedTaskList.add(task)
+      setUnfinishedTasks([...unfinishedTaskList.getTasks()])
+    }
+  }
 
   const handleNewTask = (e: FormEvent) => {
     e.preventDefault()
     setTaskDescription(taskDescription)
-    // addPoint()
+    addPoint()
     // Efter submit ska inputfältet tömmas
     // setNewTask('')
   }  
@@ -82,4 +82,4 @@ function ToDo({ todo } : Props): JSX.Element {
  )
 }
 
-export default ToDo
+export default ToDoComp

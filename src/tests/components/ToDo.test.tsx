@@ -1,20 +1,41 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { shallow } from 'enzyme'
-import ToDo from '../../components/ToDo'
-import ToDoClass from '../../classes/ToDo'
+import ToDoComp from '../../components/ToDoComp'
+import ToDo from '../../classes/ToDo'
 import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 import FinishedTaskList from '../../classes/FinishedTaskList'
 import PointCounter from '../../classes/PointCounter'
+import EasyPoint from '../../classes/EasyPoint'
+import Task from '../../classes/Task'
 
-jest.mock('../../classes/ToDo.ts')
 jest.mock('../../classes/UnfinishedTaskList')
 jest.mock('../../classes/FinishedTaskList')
-jest.mock('../../classes/PointCounter.ts')
-const unfinishedTaskList = new UnfinishedTaskList()
+jest.mock('../../classes/PointCounter')
+jest.mock('../../classes/Task')
+jest.mock('../../classes/EasyPoint')
+
+// const todoMock = ToDoClass as jest.MockedClass<typeof ToDoClass>
+
+const mockUnfinishedTaskList = new UnfinishedTaskList()
 const finishedTaskList = new FinishedTaskList()
-const pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
-const todoClass = new ToDoClass(unfinishedTaskList, finishedTaskList, pointCounter)
+const pointCounter = new PointCounter(
+  mockUnfinishedTaskList.getPoints(),
+  finishedTaskList.getPoints()
+)
+const task = new Task('test task', false, new EasyPoint())
+
+const todoMock = jest.mock(
+  '../../classes/ToDo',
+  () => {
+    return {
+      __esModule: true
+      // getUnfinishedTasks: jest.fn(() => mockUnfinishedTaskList)
+    }
+  },
+  { virtual: true }
+)
+const todoClass = new ToDo(mockUnfinishedTaskList, finishedTaskList, pointCounter)
 
 let todo: any
 
@@ -25,10 +46,13 @@ const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) =>
   })
   return wrapper.find(inputSelector)
 }
+beforeEach(() => {
+  jest.clearAllMocks()
+})
 
 describe('To Do component', () => {
   beforeEach(() => {
-    todo = shallow(<ToDo todo={todoClass} />)
+    todo = shallow(<ToDoComp todo={todoClass} />)
   })
 
   it('Should render the to do component', () => {
