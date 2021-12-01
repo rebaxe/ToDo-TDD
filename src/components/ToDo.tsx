@@ -20,6 +20,7 @@ function ToDo(): JSX.Element {
          name="todo"
          onChange={e => setNewTask(e.target.value)}
          value={newTask}
+         placeholder="Add new task..."
        />
        <button id="add-btn" type="submit">
          Add
