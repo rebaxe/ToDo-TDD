@@ -69,6 +69,11 @@ describe('To Do component', () => {
     expect(radioBtn.props('checked')).toBeTruthy()
   })
 
+  it('Submit button should be disabled', () => {
+    const submitBtn = todo.find('#add-btn')
+    expect(submitBtn.props().disabled).toBeTruthy()
+  })
+
   // it('Should reset input field after clicking on button', () => {
   //   const updatedInput = simulateInputChange(todo, '#add-input', 'new task')
   //   expect(updatedInput.props().value).toEqual('')

@@ -11,36 +11,36 @@ type Props = {
 }
 
 function ToDo({ todo } : Props): JSX.Element {
-  const unfinishedTaskList = todo.getUnfinishedTasks()
-  const finishedTaskList = todo.getFinishedTasks()
+  // const unfinishedTaskList = todo.getUnfinishedTasks()
+  // const finishedTaskList = todo.getFinishedTasks()
 
   const [taskDescription, setTaskDescription] = useState('')
   const [taskPoint, setTaskPoint] = useState('')
-  const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.tasks)
+  // const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.tasks)
 
-  const createPoint = () => {
-    if (taskPoint === '1') {
-      return new EasyPoint()
-    }
-    if (taskPoint === '2') {
-      return new MediumPoint()
-    } 
-      return new HardPoint()
-    }
+  // const createPoint = () => {
+  //   if (taskPoint === '1') {
+  //     return new EasyPoint()
+  //   }
+  //   if (taskPoint === '2') {
+  //     return new MediumPoint()
+  //   } 
+  //     return new HardPoint()
+  //   }
 
-  const addPoint = () => {
-    if (taskPoint) {
-      const point = createPoint()
-      const task = new TaskClass(taskDescription, false, point)
-      unfinishedTaskList.add(task)
-      setUnfinishedTasks([...unfinishedTaskList.tasks])
-    }
-  }
+  // const addPoint = () => {
+  //   if (taskPoint) {
+  //     const point = createPoint()
+  //     const task = new TaskClass(taskDescription, false, point)
+  //     unfinishedTaskList.add(task)
+  //     setUnfinishedTasks([...unfinishedTaskList.tasks])
+  //   }
+  // }
 
   const handleNewTask = (e: FormEvent) => {
     e.preventDefault()
     setTaskDescription(taskDescription)
-    addPoint()
+    // addPoint()
     // Efter submit ska inputfältet tömmas
     // setNewTask('')
   }  
@@ -62,7 +62,7 @@ function ToDo({ todo } : Props): JSX.Element {
          value={taskDescription}
          placeholder="Add new task..."
        />
-       <button id="add-btn" type="submit" /* disabled={!taskPoint} */>
+       <button id="add-btn" type="submit" /* disabled={!taskPoint} */ >
          Add
        </button>
        <label htmlFor="easy">
