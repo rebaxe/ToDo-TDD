@@ -5,6 +5,7 @@ import HardPoint from '../classes/HardPoint'
 import MediumPoint from '../classes/MediumPoint'
 import TaskClass from '../classes/Task'
 import ToDoClass from '../classes/ToDo'
+import UnfinishedTasks from './UnfinishedTasks'
 
 type Props = {
   todo: ToDoClass

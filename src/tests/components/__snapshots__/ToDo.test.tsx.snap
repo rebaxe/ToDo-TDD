@@ -6,6 +6,7 @@ Array [
     <h1>
       Fun To Do
     </h1>
+    <UnfinishedTasks />
     <form
       onSubmit={[Function]}
     >
