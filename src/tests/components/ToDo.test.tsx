@@ -2,6 +2,19 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import ToDo from '../../components/ToDo'
+import ToDoClass from '../../classes/ToDo'
+import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
+import FinishedTaskList from '../../classes/FinishedTaskList'
+import PointCounter from '../../classes/PointCounter'
+
+jest.mock('../../classes/ToDo.ts')
+jest.mock('../../classes/UnfinishedTaskList')
+jest.mock('../../classes/FinishedTaskList')
+jest.mock('../../classes/PointCounter.ts')
+const unfinishedTaskList = new UnfinishedTaskList()
+const finishedTaskList = new FinishedTaskList()
+const pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
+const todoClass = new ToDoClass(unfinishedTaskList, finishedTaskList, pointCounter)
 
 let todo: any
 
@@ -15,7 +28,7 @@ const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) =>
 
 describe('To Do component', () => {
   beforeEach(() => {
-    todo = shallow(<ToDo />)
+    todo = shallow(<ToDo todo={todoClass} />)
   })
 
   it('Should render the to do component', () => {
@@ -27,7 +40,7 @@ describe('To Do component', () => {
     expect(input.props().value).toBe('')
   })
 
-  it('Should update state after clicking on button', () => {
+  it('Should update input state after clicking on button', () => {
     const updatedState = simulateInputChange(todo, '#add-input', 'new task')
     expect(updatedState.props().value).toEqual('new task')
   })

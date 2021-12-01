@@ -10,7 +10,7 @@ class ToDo {
     private pointCounter: PointCounter
   ) {}
 
-  public getUnFinishedTasks(): UnfinishedTaskList {
+  public getUnfinishedTasks(): UnfinishedTaskList {
     return this.unfinishedTaskList
   }
 
