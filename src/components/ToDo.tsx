@@ -1,27 +1,31 @@
 /* eslint-disable prettier/prettier */
-import React, { FormEvent, useState } from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 
 function ToDo(): JSX.Element {
-  const [newTask, setNewTask] = useState('')
+  const [taskDescription, setTaskDescription] = useState('')
+  const [taskPoint, setTaskPoint] = useState('')
 
- const addTask = (e: FormEvent) => {
-   e.preventDefault()
-   setNewTask(newTask)
-   // Efter submit ska inputfältet tömmas
-   // setNewTask('')
- }
+  const handleNewTask = (e: FormEvent) => {
+    e.preventDefault()
+    setTaskDescription(taskDescription)
+    // Efter submit ska inputfältet tömmas
+    // setNewTask('')
+  }  
+
+  const handleSelectPoint = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // setTaskPoint(e.target.value)
+  }
+
  return (
    <div>
      <h1>Fun To Do</h1>
-     <form onSubmit={e => addTask(e)}>
-       
-      
+     <form onSubmit={e => handleNewTask(e)}>
        <input
          id="add-input"
          type="text"
          name="todo"
-         onChange={e => setNewTask(e.target.value)}
-         value={newTask}
+         onChange={e => setTaskDescription(e.target.value)}
+         value={taskDescription}
          placeholder="Add new task..."
        />
        <button id="add-btn" type="submit">
@@ -29,16 +33,16 @@ function ToDo(): JSX.Element {
        </button>
        <label htmlFor="easy">
         Easy
-        <input type="radio" id="easy" value="1" />
+        <input type="radio" name="point" id="easy" value="1" onChange={e => handleSelectPoint(e)}/>
       </label>
-      <label htmlFor="medium">
+      {/* <label htmlFor="medium">
         Medium
-        <input type="radio" id="medium" value="2"/>
+        <input type="radio" name="point" id="medium" value="2" onChange={e => handleSelectPoint(e)}/>
       </label>
       <label htmlFor="hard">
         Hard
-       <input type="radio" id="hard" value="3"/>
-      </label>
+       <input type="radio" name="point" id="hard" value="3" onChange={e => handleSelectPoint(e)}/>
+      </label> */}
      </form>
    </div>
  )
