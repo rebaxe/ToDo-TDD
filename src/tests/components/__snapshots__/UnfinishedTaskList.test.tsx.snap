@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unfinished Tasks component Should render the unfinished task component 1`] = `
+Array [
+  <React.Fragment>
+    <p>
+      No tasks
+    </p>
+  </React.Fragment>,
+]
+`;

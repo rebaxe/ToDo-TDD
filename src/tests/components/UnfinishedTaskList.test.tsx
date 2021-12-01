@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { shallow } from 'enzyme'
-import ToDo from '../../components/UnfinishedTasks'
+import UnfinishedTasks from '../../components/UnfinishedTasks'
+import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 
 let unfinishedTasks: any
 
@@ -13,9 +14,13 @@ let unfinishedTasks: any
 //   return wrapper.find(inputSelector)
 // }
 
+jest.mock('../../classes/UnfinishedTaskList.ts')
+jest.mock('../../classes/Task.ts')
+const unfinishedTaskList = new UnfinishedTaskList()
+
 describe('Unfinished Tasks component', () => {
   beforeEach(() => {
-    unfinishedTasks = shallow(<UnfinishedTasks />)
+    unfinishedTasks = shallow(<UnfinishedTasks unfinishedTaskList={unfinishedTaskList} />)
   })
 
   it('Should render the unfinished task component', () => {
