@@ -13,6 +13,7 @@ Array [
         id="add-input"
         name="todo"
         onChange={[Function]}
+        placeholder="Add new task..."
         type="text"
         value=""
       />
@@ -22,6 +23,36 @@ Array [
       >
         Add
       </button>
+      <label
+        htmlFor="easy"
+      >
+        Easy
+        <input
+          id="easy"
+          type="radio"
+          value="1"
+        />
+      </label>
+      <label
+        htmlFor="medium"
+      >
+        Medium
+        <input
+          id="medium"
+          type="radio"
+          value="2"
+        />
+      </label>
+      <label
+        htmlFor="hard"
+      >
+        Hard
+        <input
+          id="hard"
+          type="radio"
+          value="3"
+        />
+      </label>
     </form>
   </div>,
 ]
