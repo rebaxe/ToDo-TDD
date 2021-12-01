@@ -18,6 +18,7 @@ Array [
         value=""
       />
       <button
+        disabled={true}
         id="add-btn"
         type="submit"
       >
