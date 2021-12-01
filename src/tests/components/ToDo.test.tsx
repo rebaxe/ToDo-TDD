@@ -32,8 +32,16 @@ describe('To Do component', () => {
     expect(updatedState.props().value).toEqual('new task')
   })
 
-  it('Should check point with id: easy', () => {
+  it('Should check point with id: easy.', () => {
     const radioBtn = todo.find('#easy')
+    radioBtn.simulate('change', {
+      target: { checked: true }
+    })
+    expect(radioBtn.props('checked')).toBeTruthy()
+  })
+
+  it('Should check point with id: medium', () => {
+    const radioBtn = todo.find('#medium')
     radioBtn.simulate('change', {
       target: { checked: true }
     })
