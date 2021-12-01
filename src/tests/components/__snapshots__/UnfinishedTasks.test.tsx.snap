@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`To Do component Should render the to do component 1`] = `
+Array [
+  <React.Fragment>
+    <p>
+      No tasks
+    </p>
+  </React.Fragment>,
+]
+`;
