@@ -4,9 +4,10 @@ import TaskClass from '../classes/Task'
 
 type Props = {
   unfinishedTaskList: TaskClass[]
+  handleToggleStatus: any
 }
 
-function UnfinishedTasks({ unfinishedTaskList }: Props): JSX.Element {
+function UnfinishedTasks({ unfinishedTaskList, handleToggleStatus }: Props): JSX.Element {
   return (
     <>
       {!unfinishedTaskList || unfinishedTaskList.length === 0 ? (
