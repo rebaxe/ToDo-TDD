@@ -51,6 +51,7 @@ describe('Task component', () => {
     expect(checkbox.props().checked).toBeFalsy()
   })
   it('Should be checked for finished task', () => {
+    jest.spyOn(mockFinishedTask, 'getStatus').mockImplementation(() => true)
     task = mount(<Task task={mockFinishedTask} handleToggleStatus={handleToggleStatus} />)
     const checkbox = task.find('input[type="checkbox"]')
     expect(checkbox.props().checked).toBeTruthy()

@@ -14,6 +14,7 @@ function Task({ task, handleToggleStatus }: Props): JSX.Element {
         type="checkbox"
         name="taskCheckbox"
         id="taskCheckbox"
+        checked={task.getStatus()}
         onChange={() => handleToggleStatus(task)}
       />
       <span className="taskDescription">{task.getDescription()}</span>
