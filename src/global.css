@@ -87,3 +87,15 @@ label {
 input[type='radio'] {
   margin: 5px;
 }
+
+.easyPoint {
+  color: var(--color-teal);
+}
+
+.mediumTask {
+  color: var(--color-yellow);
+}
+
+.hardTask {
+  color: var(--color-orange-primary);
+}
