@@ -4,12 +4,18 @@ import TaskClass from '../classes/Task'
 
 type Props = {
   task: TaskClass
+  handleToggleStatus: any
 }
 
-function Task({ task }: Props): JSX.Element {
+function Task({ task, handleToggleStatus }: Props): JSX.Element {
   return (
     <>
-      <input type="checkbox" name="taskCheckbox" id="taskCheckbox" />
+      <input
+        type="checkbox"
+        name="taskCheckbox"
+        id="taskCheckbox"
+        onChange={() => handleToggleStatus(task)}
+      />
       <span className="taskDescription">{task.getDescription()}</span>
       {/* <Point point={task.getComplexity()} /> */}
     </>
