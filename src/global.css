@@ -99,3 +99,10 @@ input[type='radio'] {
 .hardPoint {
   color: var(--color-orange-primary);
 }
+
+li {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
