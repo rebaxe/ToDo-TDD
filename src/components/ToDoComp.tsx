@@ -53,15 +53,11 @@ function ToDoComp({ todo } : Props): JSX.Element {
 
   const handleToggleStatus = (task: TaskClass) => {
     todo.toggleStatus(task)
-    if (task.getStatus()) {
-      unfinishedTaskList.delete(task)
+    if (task.getStatus() === false) {
       setUnfinishedTasks([...unfinishedTaskList.getTasks()])
-      finishedTaskList.add(task)
       setFinishedTasks([...finishedTaskList.getTasks()])
     } else {
-      unfinishedTaskList.add(task)
       setUnfinishedTasks([...unfinishedTaskList.getTasks()])
-      finishedTaskList.delete(task)
       setFinishedTasks([...finishedTaskList.getTasks()])
     }
   }
