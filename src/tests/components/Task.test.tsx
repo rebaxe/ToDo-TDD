@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { mount } from 'enzyme'
-import Task from '../../../components/Task'
-import EasyPoint from '../../../classes/EasyPoint'
-import TaskClass from '../../../classes/Task'
+import Task from '../../components/Task'
+import EasyPoint from '../../classes/EasyPoint'
+import TaskClass from '../../classes/Task'
 
-jest.mock('../../../classes/Task')
-jest.mock('../../../classes/EasyPoint')
+jest.mock('../../classes/Task')
+jest.mock('../../classes/EasyPoint')
 
 const mockTask = new TaskClass('Test task', false, new EasyPoint())
 const handleToggleStatus = jest.fn()
@@ -37,5 +37,10 @@ describe('Task component', () => {
       target: { checked: true }
     })
     expect(handleToggleStatus).toHaveBeenCalled()
+  })
+  it('Should contain a point', () => {
+    task = mount(<Task task={mockTask} handleToggleStatus={handleToggleStatus} />)
+    const checkbox = task.find('Point')
+    expect(checkbox).toHaveLength(1)
   })
 })
