@@ -4,6 +4,7 @@ import { shallow } from 'enzyme'
 import EasyPoint from '../../classes/EasyPoint'
 import Task from '../../classes/Task'
 import FinishedTaskList from '../../classes/FinishedTaskList'
+import FinishedTasks from '../../components/FinishedTasks'
 
 jest.mock('../../classes/FinishedTaskList')
 jest.mock('../../classes/Task')
@@ -24,7 +25,7 @@ describe('Unfinished tasks component', () => {
     jest.spyOn(mockFinishedTaskList, 'getTasks').mockImplementation(() => [])
     finishedTasks = shallow(
       <FinishedTasks
-        unfinishedTaskList={mockFinishedTaskList.getTasks()}
+        finishedTaskList={mockFinishedTaskList.getTasks()}
         handleToggleStatus={handleToggleStatus}
       />
     )
