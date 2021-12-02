@@ -9,7 +9,7 @@ type Props = {
 function Task({ task }: Props): JSX.Element {
   return (
     <>
-      {/* <input type="checkbox" name="taskCheckbox" id="taskCheckbox" /> */}
+      <input type="checkbox" name="taskCheckbox" id="taskCheckbox" />
       <span className="taskDescription">{task.getDescription()}</span>
       {/* <Point point={task.getComplexity()} /> */}
     </>
