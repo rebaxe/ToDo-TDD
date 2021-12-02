@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import Task from '../../../components/Task'
 import EasyPoint from '../../../classes/EasyPoint'
 import TaskClass from '../../../classes/Task'
@@ -19,8 +19,8 @@ beforeEach(() => {
 describe('Task component', () => {
   it('Should contain task description', () => {
     jest.spyOn(mockTask, 'getDescription').mockImplementation(() => 'Test task')
-    task = shallow(<Task task={mockTask} />)
+    task = mount(<Task task={mockTask} />)
     const description = task.find('.taskDescription')
-    expect(description.text()).toEqual('Test task')
+    expect(description.text()).toContain('Test task')
   })
 })
