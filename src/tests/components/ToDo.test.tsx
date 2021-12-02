@@ -15,15 +15,13 @@ jest.mock('../../classes/PointCounter')
 jest.mock('../../classes/Task')
 jest.mock('../../classes/EasyPoint')
 
-// const todoMock = ToDoClass as jest.MockedClass<typeof ToDoClass>
-
 const mockUnfinishedTaskList = new UnfinishedTaskList()
-const finishedTaskList = new FinishedTaskList()
-const pointCounter = new PointCounter(
+const mockFinishedTaskList = new FinishedTaskList()
+const mockPointCounter = new PointCounter(
   mockUnfinishedTaskList.getPoints(),
-  finishedTaskList.getPoints()
+  mockFinishedTaskList.getPoints()
 )
-const task = new Task('test task', false, new EasyPoint())
+const mockTask = new Task('test task', false, new EasyPoint())
 
 const todoMock = jest.mock(
   '../../classes/ToDo',
@@ -35,7 +33,7 @@ const todoMock = jest.mock(
   },
   { virtual: true }
 )
-const todoClass = new ToDo(mockUnfinishedTaskList, finishedTaskList, pointCounter)
+const todoClass = new ToDo(mockUnfinishedTaskList, mockFinishedTaskList, mockPointCounter)
 
 let todo: any
 
@@ -96,6 +94,13 @@ describe('To Do component', () => {
   it('Submit button should be disabled', () => {
     const submitBtn = todo.find('#add-btn')
     expect(submitBtn.props().disabled).toBeTruthy()
+  })
+
+  it('Should display finished task list', () => {
+    jest.spyOn(mockFinishedTaskList, 'getTasks').mockImplementation(() => [mockTask])
+    todo = shallow(<ToDoComp todo={todoClass} />)
+    const finishedTasks = todo.find('FinishedTasks')
+    expect(finishedTasks).toHaveLength(1)
   })
 
   // it('Should reset input field after clicking on button', () => {
