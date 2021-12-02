@@ -42,4 +42,15 @@ describe('Unfinished tasks component', () => {
     const list = finishedTasks.find('ul')
     expect(list).toHaveLength(1)
   })
+  it('Should pass handleToggleStatus to Task', () => {
+    jest.spyOn(mockFinishedTaskList, 'getTasks').mockImplementation(() => [mockTask])
+    finishedTasks = shallow(
+      <FinishedTasks
+        finishedTaskList={mockFinishedTaskList.getTasks()}
+        handleToggleStatus={handleToggleStatus}
+      />
+    )
+    const task = finishedTasks.find('Task')
+    expect(task.props().handleToggleStatus).toBeTruthy()
+  })
 })
