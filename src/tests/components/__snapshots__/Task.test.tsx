@@ -23,4 +23,9 @@ describe('Task component', () => {
     const description = task.find('.taskDescription')
     expect(description.text()).toContain('Test task')
   })
+  it('Should contain a checkbox', () => {
+    task = mount(<Task task={mockTask} />)
+    const checkbox = task.find('input[type="checkbox"]')
+    expect(checkbox).toHaveLength(1)
+  })
 })
