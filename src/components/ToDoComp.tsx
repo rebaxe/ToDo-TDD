@@ -5,6 +5,7 @@ import HardPoint from '../classes/HardPoint'
 import MediumPoint from '../classes/MediumPoint'
 import TaskClass from '../classes/Task'
 import ToDoClass from '../classes/ToDo'
+import FinishedTasks from './FinishedTasks'
 import UnfinishedTasks from './UnfinishedTasks'
 
 type Props = {
@@ -66,6 +67,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
    <div>
      <h1>Fun To Do</h1>
      <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} />
+     {(!finishedTasks || finishedTasks.length < 1) ? null : <FinishedTasks finishedTaskList={finishedTasks} handleToggleStatus={handleToggleStatus} /> }
      <form onSubmit={e => handleNewTask(e)}>
        <input
          id="add-input"
