@@ -31,4 +31,15 @@ describe('Unfinished tasks component', () => {
     )
     expect(finishedTasks.children()).toHaveLength(0)
   })
+  it('Should render list with one task', () => {
+    jest.spyOn(mockFinishedTaskList, 'getTasks').mockImplementation(() => [mockTask])
+    finishedTasks = shallow(
+      <FinishedTasks
+        finishedTaskList={mockFinishedTaskList.getTasks()}
+        handleToggleStatus={handleToggleStatus}
+      />
+    )
+    const list = finishedTasks.find('ul')
+    expect(list).toHaveLength(1)
+  })
 })
