@@ -1,6 +1,6 @@
 import React from 'react'
 import TaskClass from '../classes/Task'
-// import Point from './Point'
+import Point from './Point'
 
 type Props = {
   task: TaskClass
@@ -17,7 +17,7 @@ function Task({ task, handleToggleStatus }: Props): JSX.Element {
         onChange={() => handleToggleStatus(task)}
       />
       <span className="taskDescription">{task.getDescription()}</span>
-      {/* <Point point={task.getComplexity()} /> */}
+      <Point point={task.getComplexity()} />
     </>
   )
 }
