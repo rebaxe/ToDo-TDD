@@ -16,7 +16,7 @@ function UnfinishedTasks({ unfinishedTaskList, handleToggleStatus }: Props): JSX
         <ul>
           {unfinishedTaskList.map((task: TaskClass) => (
             <li>
-              <Task task={task} />
+              <Task task={task} handleToggleStatus={handleToggleStatus} />
             </li>
           ))}
         </ul>
