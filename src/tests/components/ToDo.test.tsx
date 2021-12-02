@@ -27,8 +27,8 @@ const todoMock = jest.mock(
   '../../classes/ToDo',
   () => {
     return {
-      __esModule: true
-      // getUnfinishedTasks: jest.fn(() => mockUnfinishedTaskList)
+      __esModule: true,
+      getPointCounter: jest.fn(() => mockPointCounter)
     }
   },
   { virtual: true }

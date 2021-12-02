@@ -6,6 +6,17 @@ Array [
     <h1>
       Fun To Do
     </h1>
+    <PointCounter
+      pointCounter={
+        PointCounter {
+          "calculateFinishedPoints": [MockFunction],
+          "calculateUnfinishedPoints": [MockFunction],
+          "getFinishedPoints": [MockFunction],
+          "getMaxPoints": [MockFunction],
+          "getProgress": [MockFunction],
+        }
+      }
+    />
     <UnfinishedTasks
       handleToggleStatus={[Function]}
     />
