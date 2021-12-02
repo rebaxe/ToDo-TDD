@@ -6,7 +6,9 @@ Array [
     <h1>
       Fun To Do
     </h1>
-    <UnfinishedTasks />
+    <UnfinishedTasks
+      handleToggleStatus={[Function]}
+    />
     <form
       onSubmit={[Function]}
     >
