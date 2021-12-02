@@ -18,6 +18,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
   const [taskDescription, setTaskDescription] = useState('')
   const [taskPoint, setTaskPoint] = useState('')
   const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.getTasks())
+  const [finishedTasks, setFinishedTasks] = useState<Array<TaskClass>>(finishedTaskList.getTasks())
 
   const createPoint = () => {
     if (taskPoint === '1') {
@@ -50,11 +51,25 @@ function ToDoComp({ todo } : Props): JSX.Element {
     setTaskPoint(e.target.value)
   }
 
+  const handleToggleStatus = (task: TaskClass) => {
+    todo.toggleStatus(task)
+    if (task.getStatus()) {
+      unfinishedTaskList.delete(task)
+      setUnfinishedTasks([...unfinishedTaskList.getTasks()])
+      finishedTaskList.add(task)
+      setFinishedTasks([...finishedTaskList.getTasks()])
+    } else {
+      unfinishedTaskList.add(task)
+      setUnfinishedTasks([...unfinishedTaskList.getTasks()])
+      finishedTaskList.delete(task)
+      setFinishedTasks([...finishedTaskList.getTasks()])
+    }
+  }
   
  return (
    <div>
      <h1>Fun To Do</h1>
-     <UnfinishedTasks unfinishedTaskList={unfinishedTasks} />
+     <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} />
      <form onSubmit={e => handleNewTask(e)}>
        <input
          id="add-input"
