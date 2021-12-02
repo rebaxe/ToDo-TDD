@@ -9,6 +9,7 @@ jest.mock('../../classes/Task')
 jest.mock('../../classes/EasyPoint')
 
 const mockTask = new TaskClass('Test task', false, new EasyPoint())
+const mockFinishedTask = new TaskClass('Test task', true, new EasyPoint())
 const handleToggleStatus = jest.fn()
 
 let task: any
@@ -42,5 +43,16 @@ describe('Task component', () => {
     task = mount(<Task task={mockTask} handleToggleStatus={handleToggleStatus} />)
     const checkbox = task.find('Point')
     expect(checkbox).toHaveLength(1)
+  })
+
+  it('Should be unchecked for unfinished task', () => {
+    task = mount(<Task task={mockTask} handleToggleStatus={handleToggleStatus} />)
+    const checkbox = task.find('input[type="checkbox"]')
+    expect(checkbox.props().checked).toBeFalsy()
+  })
+  it('Should be checked for finished task', () => {
+    task = mount(<Task task={mockFinishedTask} handleToggleStatus={handleToggleStatus} />)
+    const checkbox = task.find('input[type="checkbox"]')
+    expect(checkbox.props().checked).toBeTruthy()
   })
 })
