@@ -10,7 +10,7 @@ type Props = {
 function FinishedTasks({ finishedTaskList, handleToggleStatus }: Props): JSX.Element {
   return (
     <>
-      {!finishedTaskList || finishedTaskList.length === 0 ? null : (
+      {!finishedTaskList || finishedTaskList.length < 1 ? null : (
         <ul>
           {finishedTaskList.map((task: TaskClass) => (
             <li>
