@@ -8,6 +8,18 @@ type Props = {
 }
 
 function FinishedTasks({ finishedTaskList, handleToggleStatus }: Props): JSX.Element {
-  return <>{(!finishedTaskList || finishedTaskList.length === 0) && null}</>
+  return (
+    <>
+      {!finishedTaskList || finishedTaskList.length === 0 ? null : (
+        <ul>
+          {finishedTaskList.map((task: TaskClass) => (
+            <li>
+              <Task task={task} handleToggleStatus={handleToggleStatus} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  )
 }
 export default FinishedTasks
