@@ -103,6 +103,12 @@ describe('To Do component', () => {
     expect(finishedTasks).toHaveLength(1)
   })
 
+  it('Should display point counter', () => {
+    todo = shallow(<ToDoComp todo={todoClass} />)
+    const finishedTasks = todo.find('PointCounter')
+    expect(finishedTasks).toHaveLength(1)
+  })
+
   // it('Should reset input field after clicking on button', () => {
   //   const updatedInput = simulateInputChange(todo, '#add-input', 'new task')
   //   expect(updatedInput.props().value).toEqual('')
