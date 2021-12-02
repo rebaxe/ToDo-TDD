@@ -92,10 +92,10 @@ input[type='radio'] {
   color: var(--color-teal);
 }
 
-.mediumTask {
+.mediumPoint {
   color: var(--color-yellow);
 }
 
-.hardTask {
+.hardPoint {
   color: var(--color-orange-primary);
 }

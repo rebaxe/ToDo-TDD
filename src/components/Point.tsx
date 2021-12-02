@@ -24,7 +24,7 @@ function Point({ point }: Props): JSX.Element {
         </span>
       )}
       {isMedium() && (
-        <span className="mediumPoint" title="Easy">
+        <span className="mediumPoint" title="Medium">
           <FontAwesomeIcon icon={faCircle} />
         </span>
       )}
