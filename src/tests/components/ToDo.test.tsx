@@ -108,9 +108,4 @@ describe('To Do component', () => {
     const finishedTasks = todo.find('PointCounter')
     expect(finishedTasks).toHaveLength(1)
   })
-
-  // it('Should reset input field after clicking on button', () => {
-  //   const updatedInput = simulateInputChange(todo, '#add-input', 'new task')
-  //   expect(updatedInput.props().value).toEqual('')
-  // })
 })
