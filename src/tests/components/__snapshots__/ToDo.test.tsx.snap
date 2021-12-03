@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`To Do component Should render the to do component 1`] = `
+Array [
+  <div>
+    <h1>
+      Fun To Do
+    </h1>
+    <PointCounter
+      pointCounter={
+        PointCounter {
+          "calculateFinishedPoints": [MockFunction],
+          "calculateUnfinishedPoints": [MockFunction],
+          "getFinishedPoints": [MockFunction],
+          "getMaxPoints": [MockFunction],
+          "getProgress": [MockFunction],
+        }
+      }
+    />
+    <UnfinishedTasks
+      handleToggleStatus={[Function]}
+    />
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        id="add-input"
+        name="todo"
+        onChange={[Function]}
+        placeholder="Add new task..."
+        type="text"
+        value=""
+      />
+      <button
+        disabled={true}
+        id="add-btn"
+        type="submit"
+      >
+        Add
+      </button>
+      <label
+        htmlFor="easy"
+      >
+        Easy
+        <input
+          id="easy"
+          name="point"
+          onChange={[Function]}
+          type="radio"
+          value="1"
+        />
+      </label>
+      <label
+        htmlFor="medium"
+      >
+        Medium
+        <input
+          id="medium"
+          name="point"
+          onChange={[Function]}
+          type="radio"
+          value="2"
+        />
+      </label>
+      <label
+        htmlFor="hard"
+      >
+        Hard
+        <input
+          id="hard"
+          name="point"
+          onChange={[Function]}
+          type="radio"
+          value="3"
+        />
+      </label>
+    </form>
+  </div>,
+]
+`;
