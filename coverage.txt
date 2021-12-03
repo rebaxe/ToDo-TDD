@@ -1,0 +1,70 @@
+Coverage report (2021-12-03 11:21)
+
+------------------------|---------|----------|---------|---------|----------------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+------------------------|---------|----------|---------|---------|----------------------------
+All files               |    79.8 |    71.42 |   90.56 |    79.8 |                            
+ src                    |   66.66 |      100 |     100 |   66.66 |                            
+  App.tsx               |     100 |      100 |     100 |     100 |                            
+  index.tsx             |       0 |      100 |     100 |       0 | 5                          
+ src/classes            |     100 |      100 |     100 |     100 |                            
+  EasyPoint.ts          |     100 |      100 |     100 |     100 |                            
+  FinishedTaskList.ts   |       0 |        0 |       0 |       0 |
+  HardPoint.ts          |     100 |      100 |     100 |     100 |
+  MediumPoint.ts        |     100 |      100 |     100 |     100 |
+  Point.ts              |       0 |        0 |       0 |       0 |
+  PointCounter.ts       |     100 |      100 |     100 |     100 |
+  Task.ts               |     100 |      100 |     100 |     100 |
+  TaskList.ts           |     100 |      100 |     100 |     100 |
+  ToDo.ts               |     100 |      100 |     100 |     100 |
+  ToDoFactory.ts        |     100 |      100 |     100 |     100 |
+  UnfinishedTaskList.ts |       0 |        0 |       0 |       0 |
+ src/components         |   62.26 |    69.23 |   77.27 |   62.26 |
+  FinishedTasks.tsx     |     100 |      100 |     100 |     100 |
+  Point.tsx             |     100 |      100 |     100 |     100 |
+  PointCounter.tsx      |     100 |      100 |     100 |     100 |
+  Task.tsx              |     100 |      100 |     100 |     100 |
+  ToDoComp.tsx          |   45.94 |    33.33 |   54.54 |   45.94 | 26-32,36-40,45-47,55-61,71     
+  UnfinishedTasks.tsx   |     100 |      100 |     100 |     100 |
+------------------------|---------|----------|---------|---------|----------------------------    
+
+Test Suites: 15 passed, 15 total
+Tests:       50 passed, 50 total
+Snapshots:   1 passed, 1 total
+Time:        9.437 s
+Ran all test suites.
+
+Coverage report (2021-12-02 17:00)
+------------------------|---------|----------|---------|---------|----------------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s          
+------------------------|---------|----------|---------|---------|----------------------------
+All files               |   77.88 |    71.42 |   88.67 |   77.88 |                            
+ src                    |       0 |      100 |       0 |       0 |                            
+  App.tsx               |       0 |      100 |       0 |       0 | 7-9                        
+  index.tsx             |       0 |      100 |     100 |       0 | 5                          
+ src/classes            |     100 |      100 |     100 |     100 |                            
+  EasyPoint.ts          |     100 |      100 |     100 |     100 |                            
+  FinishedTaskList.ts   |       0 |        0 |       0 |       0 |                            
+  HardPoint.ts          |     100 |      100 |     100 |     100 |                            
+  MediumPoint.ts        |     100 |      100 |     100 |     100 |                            
+  Point.ts              |       0 |        0 |       0 |       0 |                            
+  PointCounter.ts       |     100 |      100 |     100 |     100 |                            
+  Task.ts               |     100 |      100 |     100 |     100 |                            
+  TaskList.ts           |     100 |      100 |     100 |     100 |                            
+  ToDo.ts               |     100 |      100 |     100 |     100 |                            
+  ToDoFactory.ts        |     100 |      100 |     100 |     100 |                            
+  UnfinishedTaskList.ts |       0 |        0 |       0 |       0 |                            
+ src/components         |   62.26 |    69.23 |   77.27 |   62.26 |                            
+  FinishedTasks.tsx     |     100 |      100 |     100 |     100 |                            
+  Point.tsx             |     100 |      100 |     100 |     100 |                            
+  PointCounter.tsx      |     100 |      100 |     100 |     100 |                            
+  Task.tsx              |     100 |      100 |     100 |     100 |                            
+  ToDoComp.tsx          |   45.94 |    33.33 |   54.54 |   45.94 | 26-32,36-40,45-47,57-63,73 
+  UnfinishedTasks.tsx   |     100 |      100 |     100 |     100 |                            
+------------------------|---------|----------|---------|---------|----------------------------
+
+Test Suites: 14 passed, 14 total
+Tests:       49 passed, 49 total
+Snapshots:   1 passed, 1 total
+Time:        8.503 s
+Ran all test suites.

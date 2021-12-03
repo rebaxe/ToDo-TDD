@@ -10,7 +10,7 @@
   --color-darkgray: #282828;
 }
 
-*, 
+*,
 *::after,
 *::before {
   margin: 0;
@@ -26,7 +26,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   background-color: var(--color-bluegray);
-  color: var(--color-darkgray);
+  /* color: var(--color-darkgray); */
+  color: #f4a261;
+
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
@@ -45,4 +47,62 @@ ul {
 
 img {
   width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-orange-primary);
+  color: var(--color-yellow);
+  transition: ease-in-out 0.2s;
+  border: 1px solid var(--color-orange-primary);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: var(--color-yellow);
+  color: var(--color-orange-primary);
+  cursor: pointer;
+}
+
+input[type='text'] {
+  display: inline-block;
+  padding: 10px 5px;
+  border: 1px solid lightgray;
+}
+
+label {
+  margin: 5px;
+}
+
+input[type='radio'] {
+  margin: 5px;
+}
+
+.easyPoint {
+  color: var(--color-teal);
+}
+
+.mediumPoint {
+  color: var(--color-yellow);
+}
+
+.hardPoint {
+  color: var(--color-orange-primary);
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
 }

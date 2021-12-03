@@ -1,10 +1,14 @@
 import React from 'react'
 import './global.css'
+import ToDoComp from './components/ToDoComp'
+import TodoFactory from './classes/ToDoFactory'
 
 function App(): JSX.Element {
+  const todoFactory = new TodoFactory()
+
   return (
     <>
-      <h1>Hello World</h1>
+      <ToDoComp todo={todoFactory.getToDo()} />
     </>
   )
 }
