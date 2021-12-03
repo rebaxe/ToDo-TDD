@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { shallow } from 'enzyme'
-import ToDoComp from '../../components/ToDoComp'
-import ToDo from '../../classes/ToDo'
 import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 import FinishedTaskList from '../../classes/FinishedTaskList'
 import PointCounterClass from '../../classes/PointCounter'
@@ -22,17 +20,9 @@ const mockPointCounter = new PointCounterClass(
   mockUnfinishedTaskList.getPoints(),
   mockFinishedTaskList.getPoints()
 )
-const mockTask = new Task('test task', false, new EasyPoint())
 
 let counterWrapper: any
 
-// const simulateInputChange = (wrapper: any, inputSelector: any, newValue: any) => {
-//   const input = wrapper.find(inputSelector)
-//   input.simulate('change', {
-//     target: { value: newValue }
-//   })
-//   return wrapper.find(inputSelector)
-// }
 beforeEach(() => {
   jest.clearAllMocks()
 })
@@ -45,6 +35,7 @@ describe('Point counter component', () => {
     const counter = counterWrapper.find('span')
     expect(counter.text()).toContain('0 / 0')
   })
+
   it('Counter should present 0/1 points', () => {
     jest.spyOn(mockPointCounter, 'getFinishedPoints').mockImplementation(() => 0)
     jest.spyOn(mockPointCounter, 'getMaxPoints').mockImplementation(() => 1)
@@ -52,6 +43,7 @@ describe('Point counter component', () => {
     const counter = counterWrapper.find('span')
     expect(counter.text()).toContain('0 / 1')
   })
+
   it('Counter should present 1/3 points', () => {
     jest.spyOn(mockPointCounter, 'getFinishedPoints').mockImplementation(() => 1)
     jest.spyOn(mockPointCounter, 'getMaxPoints').mockImplementation(() => 3)
