@@ -45,8 +45,6 @@ function ToDoComp({ todo } : Props): JSX.Element {
     e.preventDefault()
     setTaskDescription(taskDescription)
     addPoint()
-    // Efter submit ska inputfältet tömmas
-    // setNewTask('')
   }  
 
   const handleSelectPoint = (e: ChangeEvent<HTMLInputElement>) => {
