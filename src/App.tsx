@@ -6,11 +6,7 @@ import TodoFactory from './classes/ToDoFactory'
 function App(): JSX.Element {
   const todoFactory = new TodoFactory()
 
-  return (
-    <>
-      <ToDoComp todo={todoFactory.getToDo()} />
-    </>
-  )
+  return <></>
 }
 
 export default App
