@@ -17,10 +17,7 @@ jest.mock('../../classes/EasyPoint')
 
 const mockUnfinishedTaskList = new UnfinishedTaskList()
 const mockFinishedTaskList = new FinishedTaskList()
-const mockPointCounter = new PointCounter(
-  mockUnfinishedTaskList.getPoints(),
-  mockFinishedTaskList.getPoints()
-)
+const mockPointCounter = new PointCounter(mockUnfinishedTaskList, mockFinishedTaskList)
 const mockTask = new Task('test task', false, new EasyPoint())
 
 const todoMock = jest.mock(

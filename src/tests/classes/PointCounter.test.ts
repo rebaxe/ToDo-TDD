@@ -24,7 +24,7 @@ class StubUnfinishedTaskList extends UnfinishedTaskList {
 const finishedTaskList = new StubFinishedTaskList()
 const unfinishedTaskList = new StubUnfinishedTaskList()
 
-const pointCounter = new PointCounter(unfinishedTaskList.getPoints(), finishedTaskList.getPoints())
+const pointCounter = new PointCounter(unfinishedTaskList, finishedTaskList)
 
 describe('Point counter tests', () => {
   test('TC7a. Get max points', () => {

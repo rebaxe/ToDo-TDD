@@ -8,10 +8,7 @@ class TodoFactory {
 
   private finishedTaskList = new FinishedTaskList()
 
-  private pointCounter = new PointCounter(
-    this.unfinishedTaskList.getPoints(),
-    this.finishedTaskList.getPoints()
-  )
+  private pointCounter = new PointCounter(this.unfinishedTaskList, this.finishedTaskList)
 
   private toDo = new ToDo(this.unfinishedTaskList, this.finishedTaskList, this.pointCounter)
 

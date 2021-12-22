@@ -6,12 +6,13 @@ type Props = {
 }
 
 function PointCounter({ pointCounter }: Props): JSX.Element {
-  const finishedPointsAsNumber = pointCounter.getFinishedPoints()
-  const maxPointsAsNumber = pointCounter.getMaxPoints()
+  const finishedPoints = pointCounter.getFinishedPoints()
+  const maxPoints = pointCounter.getMaxPoints()
+
   return (
     <>
       <span>
-        {finishedPointsAsNumber} / {maxPointsAsNumber}
+        {finishedPoints} / {maxPoints}
       </span>
     </>
   )

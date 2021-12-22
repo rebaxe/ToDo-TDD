@@ -16,11 +16,13 @@ type Props = {
 function ToDoComp({ todo } : Props): JSX.Element {
   const unfinishedTaskList = todo.getUnfinishedTasks()
   const finishedTaskList = todo.getFinishedTasks()
+  const pointCounterClass = todo.getPointCounter()
 
   const [taskDescription, setTaskDescription] = useState('')
   const [taskPoint, setTaskPoint] = useState('')
   const [unfinishedTasks, setUnfinishedTasks] = useState<Array<TaskClass>>(unfinishedTaskList.getTasks())
   const [finishedTasks, setFinishedTasks] = useState<Array<TaskClass>>(finishedTaskList.getTasks())
+
 
   const createPoint = () => {
     if (taskPoint === '1') {
@@ -65,7 +67,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
  return (
    <div>
      <h1>Fun To Do</h1>
-     <PointCounter pointCounter={todo.getPointCounter()}/>
+     <PointCounter pointCounter={pointCounterClass}/>
      <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} />
      {(!finishedTasks || finishedTasks.length < 1) ? null : <FinishedTasks finishedTaskList={finishedTasks} handleToggleStatus={handleToggleStatus} /> }
      <form onSubmit={e => handleNewTask(e)}>

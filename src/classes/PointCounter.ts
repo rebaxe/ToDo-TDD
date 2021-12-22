@@ -1,7 +1,11 @@
-import Point from './Point'
+import FinishedTaskList from './FinishedTaskList'
+import UnfinishedTaskList from './UnfinishedTaskList'
 
 class PointCounter {
-  constructor(private unfinishedPoints: Point[], private finishedPoints: Point[]) {}
+  constructor(
+    private unfinishedTasks: UnfinishedTaskList,
+    private finishedTasks: FinishedTaskList
+  ) {}
 
   public getMaxPoints(): number {
     return this.calculateUnfinishedPoints() + this.calculateFinishedPoints()
@@ -17,7 +21,8 @@ class PointCounter {
 
   private calculateFinishedPoints() {
     let points = 0
-    this.finishedPoints.forEach(point => {
+    const finishedPoints = this.finishedTasks.getPoints()
+    finishedPoints.forEach(point => {
       points += point.getPoint()
     })
     return points
@@ -25,7 +30,8 @@ class PointCounter {
 
   private calculateUnfinishedPoints() {
     let points = 0
-    this.unfinishedPoints.forEach(point => {
+    const unfinishedPoints = this.unfinishedTasks.getPoints()
+    unfinishedPoints.forEach(point => {
       points += point.getPoint()
     })
     return points
