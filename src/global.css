@@ -49,10 +49,11 @@ img {
   width: 100%;
 }
 
-form {
+.form-inputs {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin: 5px;
 }
 
 button {

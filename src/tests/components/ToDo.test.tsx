@@ -50,10 +50,6 @@ describe('To Do component', () => {
     todo = shallow(<ToDoComp todo={todoClass} />)
   })
 
-  it('Should render the to do component', () => {
-    expect(todo.getElements()).toMatchSnapshot()
-  })
-
   it('Should render an empty input field', () => {
     const input = todo.find('#add-input')
     expect(input.props().value).toBe('')
