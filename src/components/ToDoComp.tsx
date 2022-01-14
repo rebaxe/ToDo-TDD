@@ -63,13 +63,27 @@ function ToDoComp({ todo } : Props): JSX.Element {
       setFinishedTasks([...finishedTaskList.getTasks()])
     }
   }
+
+  const handleDeleteTask = (task: TaskClass) => {
+    if (task.getStatus() === false) {
+      unfinishedTaskList.delete(task)
+      setUnfinishedTasks([...unfinishedTaskList.getTasks()])
+    } else {
+      finishedTaskList.delete(task)
+      setFinishedTasks([...finishedTaskList.getTasks()])
+    }
+  }
+
+  const hasFinishedTasks = (): boolean => {
+    return finishedTasks.length > 0
+  }
   
   return (
-    <div>
+    <div className="todo-container">
       <h1>Fun To Do</h1>
       <PointCounter pointCounter={pointCounterClass}/>
-      <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} />
-      {(!finishedTasks || finishedTasks.length < 1) ? null : <FinishedTasks finishedTaskList={finishedTasks} handleToggleStatus={handleToggleStatus} /> }
+      <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} hasFinishedTasks={hasFinishedTasks()} handleDeleteTask={handleDeleteTask} />
+      {(!finishedTasks || finishedTasks.length < 1) ? null : <FinishedTasks finishedTaskList={finishedTasks} handleToggleStatus={handleToggleStatus} handleDeleteTask={handleDeleteTask} /> }
       <form onSubmit={e => handleNewTask(e)}>
         <div className="form-inputs">
           <input

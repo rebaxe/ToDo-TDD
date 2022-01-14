@@ -4,8 +4,6 @@ import { shallow } from 'enzyme'
 import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 import FinishedTaskList from '../../classes/FinishedTaskList'
 import PointCounterClass from '../../classes/PointCounter'
-import EasyPoint from '../../classes/EasyPoint'
-import Task from '../../classes/Task'
 import PointCounter from '../../components/PointCounter'
 
 jest.mock('../../classes/UnfinishedTaskList')
@@ -16,10 +14,7 @@ jest.mock('../../classes/EasyPoint')
 
 const mockUnfinishedTaskList = new UnfinishedTaskList()
 const mockFinishedTaskList = new FinishedTaskList()
-const mockPointCounter = new PointCounterClass(
-  mockUnfinishedTaskList.getPoints(),
-  mockFinishedTaskList.getPoints()
-)
+const mockPointCounter = new PointCounterClass(mockUnfinishedTaskList, mockFinishedTaskList)
 
 let counterWrapper: any
 
@@ -28,12 +23,12 @@ beforeEach(() => {
 })
 
 describe('Point counter component', () => {
-  it('Counter should present 0/0 points', () => {
+  it('Counter should not show when no tasks', () => {
     jest.spyOn(mockPointCounter, 'getFinishedPoints').mockImplementation(() => 0)
     jest.spyOn(mockPointCounter, 'getMaxPoints').mockImplementation(() => 0)
     counterWrapper = shallow(<PointCounter pointCounter={mockPointCounter} />)
     const counter = counterWrapper.find('span')
-    expect(counter.text()).toContain('0 / 0')
+    expect(counter).toEqual({})
   })
 
   it('Counter should present 0/1 points', () => {

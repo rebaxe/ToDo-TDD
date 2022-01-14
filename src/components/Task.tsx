@@ -5,11 +5,12 @@ import Point from './Point'
 type Props = {
   task: TaskClass
   handleToggleStatus: any
+  handleDeleteTask: any
 }
 
-function Task({ task, handleToggleStatus }: Props): JSX.Element {
+function Task({ task, handleToggleStatus, handleDeleteTask }: Props): JSX.Element {
   return (
-    <>
+    <div>
       <input
         type="checkbox"
         name="taskCheckbox"
@@ -19,7 +20,10 @@ function Task({ task, handleToggleStatus }: Props): JSX.Element {
       />
       <span className="taskDescription">{task.getDescription()}</span>
       <Point point={task.getComplexity()} />
-    </>
+      <button type="button" className="deleteTask" onClick={() => handleDeleteTask(task)}>
+        Delete
+      </button>
+    </div>
   )
 }
 

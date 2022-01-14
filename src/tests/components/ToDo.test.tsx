@@ -47,11 +47,12 @@ beforeEach(() => {
 
 describe('To Do component', () => {
   beforeEach(() => {
+    jest.spyOn(mockFinishedTaskList, 'getTasks').mockImplementation(() => [])
     todo = shallow(<ToDoComp todo={todoClass} />)
   })
 
   it('Should render an empty input field', () => {
-    const input = todo.find('#add-input')
+    const input = todo.find('.form-inputs > #add-input')
     expect(input.props().value).toBe('')
   })
 
