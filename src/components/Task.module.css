@@ -1,0 +1,42 @@
+.taskWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--color-orange-primary) 2px solid;
+  background-color: var(--color-offwhite);
+  color: var(--color-darkgray);
+  padding: 5px 5px;
+  width: 100%;
+}
+
+.deleteTask {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.boxDescriptionWrapper {
+  display: grid;
+  grid-template-areas: 'left right';
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  grid-area: left;
+}
+
+.taskDescription {
+  grid-area: right;
+  padding-left: 0.3rem;
+}
+
+.taskContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
