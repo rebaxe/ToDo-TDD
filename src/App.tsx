@@ -1,6 +1,6 @@
 import React from 'react'
 import './global.css'
-import ToDoComp from './components/ToDoComp'
+import ToDoComp from './components/ToDo/ToDoComp'
 import TodoFactory from './classes/ToDoFactory'
 
 function App(): JSX.Element {

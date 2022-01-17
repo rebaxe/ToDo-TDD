@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import EasyPoint from '../../classes/EasyPoint'
 import Task from '../../classes/Task'
 import FinishedTaskList from '../../classes/FinishedTaskList'
-import FinishedTasks from '../../components/FinishedTasks'
+import FinishedTasks from '../../components/TaskLists/FinishedTasks'
 
 jest.mock('../../classes/FinishedTaskList')
 jest.mock('../../classes/Task')
@@ -15,6 +15,7 @@ const mockTask = new Task('test task', false, new EasyPoint())
 const mockFinishedTaskList = new FinishedTaskList()
 let finishedTasks: any
 const handleToggleStatus = jest.fn()
+const handleDeleteTask = jest.fn()
 
 beforeEach(() => {
   jest.clearAllMocks()
@@ -27,6 +28,7 @@ describe('Unfinished tasks component', () => {
       <FinishedTasks
         finishedTaskList={mockFinishedTaskList.getTasks()}
         handleToggleStatus={handleToggleStatus}
+        handleDeleteTask={handleDeleteTask}
       />
     )
     expect(finishedTasks.children()).toHaveLength(0)
@@ -37,6 +39,7 @@ describe('Unfinished tasks component', () => {
       <FinishedTasks
         finishedTaskList={mockFinishedTaskList.getTasks()}
         handleToggleStatus={handleToggleStatus}
+        handleDeleteTask={handleDeleteTask}
       />
     )
     const list = finishedTasks.find('ul')
@@ -48,6 +51,7 @@ describe('Unfinished tasks component', () => {
       <FinishedTasks
         finishedTaskList={mockFinishedTaskList.getTasks()}
         handleToggleStatus={handleToggleStatus}
+        handleDeleteTask={handleDeleteTask}
       />
     )
     const task = finishedTasks.find('Task')

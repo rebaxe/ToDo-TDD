@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { shallow } from 'enzyme'
-import ToDoComp from '../../components/ToDoComp'
+import ToDoComp from '../../components/ToDo/ToDoComp'
 import ToDo from '../../classes/ToDo'
 import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 import FinishedTaskList from '../../classes/FinishedTaskList'

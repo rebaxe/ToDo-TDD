@@ -1,13 +1,13 @@
 /* eslint-disable prettier/prettier */
 import React, { ChangeEvent, FormEvent, useState } from 'react'
-import EasyPoint from '../classes/EasyPoint'
-import HardPoint from '../classes/HardPoint'
-import MediumPoint from '../classes/MediumPoint'
-import TaskClass from '../classes/Task'
-import ToDoClass from '../classes/ToDo'
-import FinishedTasks from './FinishedTasks'
-import PointCounter from './PointCounter'
-import UnfinishedTasks from './UnfinishedTasks'
+import EasyPoint from '../../classes/EasyPoint'
+import HardPoint from '../../classes/HardPoint'
+import MediumPoint from '../../classes/MediumPoint'
+import TaskClass from '../../classes/Task'
+import ToDoClass from '../../classes/ToDo'
+import FinishedTasks from '../TaskLists/FinishedTasks'
+import PointCounter from '../PointCounter'
+import UnfinishedTasks from '../TaskLists/UnfinishedTasks'
 import styles from './TodoComp.module.css'
 
 type Props = {

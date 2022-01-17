@@ -1,23 +1,27 @@
 import React from 'react'
-import Task from './Task/Task'
-import TaskClass from '../classes/Task'
+import Task from '../Task/Task'
+import TaskClass from '../../classes/Task'
 
 type Props = {
-  finishedTaskList: TaskClass[]
+  unfinishedTaskList: TaskClass[]
   handleToggleStatus: any
+  hasFinishedTasks: boolean
   handleDeleteTask: any
 }
 
-function FinishedTasks({
-  finishedTaskList,
+function UnfinishedTasks({
+  unfinishedTaskList,
   handleToggleStatus,
+  hasFinishedTasks,
   handleDeleteTask
 }: Props): JSX.Element {
   return (
     <>
-      {!finishedTaskList || finishedTaskList.length < 1 ? null : (
+      {!unfinishedTaskList || (unfinishedTaskList.length === 0 && !hasFinishedTasks) ? (
+        <p className="noTasks">No tasks</p>
+      ) : (
         <ul>
-          {finishedTaskList.map((task: TaskClass) => (
+          {unfinishedTaskList.map((task: TaskClass) => (
             <li>
               <Task
                 task={task}
@@ -31,4 +35,4 @@ function FinishedTasks({
     </>
   )
 }
-export default FinishedTasks
+export default UnfinishedTasks
