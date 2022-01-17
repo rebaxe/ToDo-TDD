@@ -52,7 +52,7 @@ describe('To Do component', () => {
   })
 
   it('Should render an empty input field', () => {
-    const input = todo.find('.form-inputs > #add-input')
+    const input = todo.find('.formInputs > #add-input')
     expect(input.props().value).toBe('')
   })
 

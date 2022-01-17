@@ -1,5 +1,5 @@
 import React from 'react'
-import Task from './Task'
+import Task from './Task/Task'
 import TaskClass from '../classes/Task'
 
 type Props = {

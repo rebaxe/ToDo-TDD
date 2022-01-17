@@ -1,8 +1,8 @@
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import TaskClass from '../classes/Task'
-import Point from './Point'
+import TaskClass from '../../classes/Task'
+import Point from '../Point'
 import styles from './Task.module.css'
 
 type Props = {
