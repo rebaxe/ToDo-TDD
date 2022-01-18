@@ -40,3 +40,8 @@ input[type='checkbox'] {
   margin-bottom: 10px;
   width: 100%;
 }
+
+.finishedTask {
+  text-decoration: line-through;
+  color: var(--color-lightgray);
+}

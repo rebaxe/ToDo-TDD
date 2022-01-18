@@ -1,10 +1,27 @@
 .todoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   position: relative;
   height: 100vh;
+}
+
+.todoHeadingWrapper {
+  width: 100%;
+  background-color: var(--color-teal);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskListWrapper {
+  width: 80%;
+  height: auto;
+  margin: 20px 0 110px;
+  overflow-y: scroll;
 }
 
 .addTaskForm {
@@ -15,6 +32,8 @@
   padding: 3% 0 3%;
   width: 100vw;
   background-color: var(--color-teal);
+  position: fixed;
+  bottom: 0;
 }
 
 .formInputs {

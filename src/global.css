@@ -8,6 +8,7 @@
   --color-bluegray: #264653;
   --color-offwhite: #fff9f2;
   --color-darkgray: #282828;
+  --color-lightgray: #28282886;
 }
 
 *,
@@ -85,12 +86,4 @@ li {
   flex-direction: row;
   gap: 5px;
   align-items: center;
-}
-
-.pointcounter-wrapper {
-  background-color: var(--color-teal);
-  color: var(--color-orange-secondary);
-  padding: 10px 20px;
-  border-radius: 20px;
-  margin: 5px;
 }

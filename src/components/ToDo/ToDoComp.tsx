@@ -6,7 +6,7 @@ import MediumPoint from '../../classes/MediumPoint'
 import TaskClass from '../../classes/Task'
 import ToDoClass from '../../classes/ToDo'
 import FinishedTasks from '../TaskLists/FinishedTasks'
-import PointCounter from '../PointCounter'
+import PointCounter from '../PointCounter/PointCounter'
 import UnfinishedTasks from '../TaskLists/UnfinishedTasks'
 import styles from './TodoComp.module.css'
 
@@ -81,9 +81,11 @@ function ToDoComp({ todo } : Props): JSX.Element {
   
   return (
     <div className={styles.todoContainer}>
-      <div>
+      <div className={styles.todoHeadingWrapper}>
       <h1>Fun To Do</h1>
         <PointCounter pointCounter={pointCounterClass}/>
+      </div>
+      <div className={styles.taskListWrapper}>
         <UnfinishedTasks unfinishedTaskList={unfinishedTasks} handleToggleStatus={handleToggleStatus} hasFinishedTasks={hasFinishedTasks()} handleDeleteTask={handleDeleteTask} />
         {(!finishedTasks || finishedTasks.length < 1) ? null : <FinishedTasks finishedTaskList={finishedTasks} handleToggleStatus={handleToggleStatus} handleDeleteTask={handleDeleteTask} /> }
       </div>

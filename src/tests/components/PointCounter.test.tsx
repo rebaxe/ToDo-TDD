@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import UnfinishedTaskList from '../../classes/UnfinishedTaskList'
 import FinishedTaskList from '../../classes/FinishedTaskList'
 import PointCounterClass from '../../classes/PointCounter'
-import PointCounter from '../../components/PointCounter'
+import PointCounter from '../../components/PointCounter/PointCounter'
 
 jest.mock('../../classes/UnfinishedTaskList')
 jest.mock('../../classes/FinishedTaskList')

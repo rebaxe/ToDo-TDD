@@ -1,0 +1,11 @@
+.pointCounterContainer {
+  width: 100%;
+}
+
+.pointCounterWrapper {
+  background-color: var(--color-teal);
+  width: 100%;
+  color: var(--color-orange-secondary);
+  padding: 10px 20px;
+  margin: 5px;
+}

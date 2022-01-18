@@ -23,7 +23,15 @@ function Task({ task, handleToggleStatus, handleDeleteTask }: Props): JSX.Elemen
             checked={task.getStatus()}
             onChange={() => handleToggleStatus(task)}
           />
-          <div className={styles.taskDescription}>{task.getDescription()}</div>
+          <div
+            className={`${
+              task.getStatus()
+                ? `${styles.finishedTask} ${styles.taskDescription}`
+                : `${styles.taskDescription}`
+            }}`}
+          >
+            {task.getDescription()}
+          </div>
         </div>
         <Point point={task.getComplexity()} />
       </div>
