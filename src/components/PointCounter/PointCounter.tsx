@@ -13,7 +13,7 @@ function PointCounter({ pointCounter }: Props): JSX.Element {
   return (
     <div className={styles.pointCounterContainer}>
       {maxPoints > 0 && (
-        <div className={styles.pointcounterWrapper}>
+        <div className={styles.pointCounterWrapper}>
           <span>
             {finishedPoints} / {maxPoints} points finished
           </span>
