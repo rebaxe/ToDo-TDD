@@ -32,8 +32,12 @@ function ToDoComp({ todo } : Props): JSX.Element {
     if (taskPoint === '2') {
       return new MediumPoint()
     } 
-      return new HardPoint()
-    }
+    return new HardPoint()
+  }
+
+  const resetInputText = () => {
+    setTaskDescription('')
+  }
 
   const addPoint = () => {
     if (taskPoint) {
@@ -41,6 +45,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
       const task = new TaskClass(taskDescription, false, point)
       unfinishedTaskList.add(task)
       setUnfinishedTasks([...unfinishedTaskList.getTasks()])
+      resetInputText()
     }
   }
 
