@@ -1,7 +1,6 @@
 .todoContainer {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   position: relative;
   height: 100vh;
@@ -30,7 +29,7 @@
   justify-content: center;
   align-items: center;
   padding: 3% 0 3%;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color-teal);
   position: fixed;
   bottom: 0;
