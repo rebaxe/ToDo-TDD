@@ -21,10 +21,45 @@
   grid-template-areas: 'left right';
   grid-template-columns: min-content auto;
   align-items: center;
+  gap: 5px;
 }
 
 input[type='checkbox'] {
   grid-area: left;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  background-color: var(--color-orange-primary);
+  color: var(--color-orange-primary);
+  width: 20px;
+  height: 20px;
+  border: 1px var(--color-offwhite);
+  border-radius: 3px;
+  /* transform: translateY(-0.075em); */
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  transition: all 1s ease-in-out;
+  transform-origin: bottom left;
+  transform: scale(0);
+  box-shadow: inset 1em 1em var(--color-offwhite);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: var(--color-orange-primary);
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+input[type='checkbox']:focus {
+  outline: max(1px, 1px) solid var(--color-orange-primary);
+  outline-offset: max(1px, 1px);
 }
 
 .taskDescription {
