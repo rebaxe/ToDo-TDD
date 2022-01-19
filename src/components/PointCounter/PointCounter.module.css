@@ -1,10 +1,11 @@
 .pointCounterContainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pointCounterWrapper {
-  width: 100%;
-  color: var(--color-bluegray);
-  padding: 10px 0;
-  text-align: center;
+  width: 50%;
 }
