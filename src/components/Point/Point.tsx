@@ -5,6 +5,8 @@ import EasyPoint from '../../classes/EasyPoint'
 import PointClass from '../../classes/Point'
 import MediumPoint from '../../classes/MediumPoint'
 import HardPoint from '../../classes/HardPoint'
+import styles from './Point.module.css'
+import Tooltip from '../Tooltip/Tooltip'
 
 type Props = {
   point: PointClass
@@ -23,19 +25,25 @@ function Point({ point }: Props): JSX.Element {
   return (
     <>
       {isEasy() && (
-        <span className="easyPoint" title="Easy">
-          <FontAwesomeIcon icon={faCircle} />
-        </span>
+        <Tooltip delay="" direction="" content="Easy 🐥">
+          <span className="easyPoint">
+            <FontAwesomeIcon icon={faCircle} />
+          </span>
+        </Tooltip>
       )}
       {isMedium() && (
-        <span className="mediumPoint" title="Medium">
-          <FontAwesomeIcon icon={faCircle} />
-        </span>
+        <Tooltip delay="" direction="" content="Medium 🦆">
+          <span className="mediumPoint">
+            <FontAwesomeIcon icon={faCircle} />
+          </span>
+        </Tooltip>
       )}
       {isHard() && (
-        <span className="hardPoint" title="Hard">
-          <FontAwesomeIcon icon={faCircle} />
-        </span>
+        <Tooltip delay="" direction="" content="Hard 🦅">
+          <span className="hardPoint">
+            <FontAwesomeIcon icon={faCircle} />
+          </span>
+        </Tooltip>
       )}
     </>
   )
