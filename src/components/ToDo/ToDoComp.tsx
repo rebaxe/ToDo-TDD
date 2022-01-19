@@ -105,7 +105,7 @@ function ToDoComp({ todo } : Props): JSX.Element {
               value={taskDescription}
               placeholder="Add new task..."
             />
-            <button id="add-btn" type="submit" disabled={!taskPoint}>
+            <button id="add-btn" type="submit" disabled={!taskPoint || !taskDescription}>
               Add
             </button>
           </div>
