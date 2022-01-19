@@ -13,7 +13,8 @@
 .deleteTask {
   margin: 5px;
   padding: 5px;
-  border-radius: 3px;
+  height: 35px;
+  width: 35px;
 }
 
 .boxDescriptionWrapper {

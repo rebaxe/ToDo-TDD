@@ -1,6 +1,7 @@
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { motion } from 'framer-motion'
 import TaskClass from '../../classes/Task'
 import Point from '../Point/Point'
 import styles from './Task.module.css'
@@ -35,9 +36,15 @@ function Task({ task, handleToggleStatus, handleDeleteTask }: Props): JSX.Elemen
         </div>
         <Point point={task.getComplexity()} />
       </div>
-      <button type="button" className={styles.deleteTask} onClick={() => handleDeleteTask(task)}>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        type="button"
+        className={styles.deleteTask}
+        onClick={() => handleDeleteTask(task)}
+      >
         <FontAwesomeIcon icon={faTrashAlt} />
-      </button>
+      </motion.button>
     </div>
   )
 }

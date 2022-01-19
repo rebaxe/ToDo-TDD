@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { ChangeEvent, FormEvent, useState } from 'react'
+import { motion } from 'framer-motion'
 import EasyPoint from '../../classes/EasyPoint'
 import HardPoint from '../../classes/HardPoint'
 import MediumPoint from '../../classes/MediumPoint'
@@ -105,9 +106,15 @@ function ToDoComp({ todo } : Props): JSX.Element {
               value={taskDescription}
               placeholder="Add new task..."
             />
-            <button id="add-btn" type="submit" disabled={!taskPoint || !taskDescription}>
+            <motion.button 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} 
+              id="add-btn" 
+              type="submit" 
+              disabled={!taskPoint || !taskDescription}
+            >
               Add
-            </button>
+            </motion.button>
           </div>
           <div className={styles.formLabels}>
             <label className={styles.radioLabel} htmlFor="easy">
