@@ -109,18 +109,18 @@ function ToDoComp({ todo } : Props): JSX.Element {
               Add
             </button>
           </div>
-          <div className="form-labels">
-            <label htmlFor="easy">
-              Easy
+          <div className={styles.formLabels}>
+            <label className={styles.radioLabel} htmlFor="easy">
               <input type="radio" name="point" id="easy" value="1" onChange={e => handleSelectPoint(e)}/>
+              <span className={styles.radioSpan}>Easy</span>
             </label>
-            <label htmlFor="medium">
-              Medium
+            <label className={styles.radioLabel} htmlFor="medium">
               <input type="radio" name="point" id="medium" value="2" onChange={e => handleSelectPoint(e)}/>
+              <span className={styles.radioSpan}>Medium</span>
             </label>
-            <label htmlFor="hard">
-              Hard
+            <label className={styles.radioLabel} htmlFor="hard">
               <input type="radio" name="point" id="hard" value="3" onChange={e => handleSelectPoint(e)}/>
+              <span className={styles.radioSpan}>Hard</span>
             </label>
           </div>
         </form>
