@@ -24,7 +24,7 @@ function Task({ task, handleToggleStatus, handleDeleteTask }: Props): JSX.Elemen
             onChange={() => handleToggleStatus(task)}
           />
           <div
-            className={`${
+            className={`taskDescription ${
               task.getStatus()
                 ? `${styles.finishedTask} ${styles.taskDescription}`
                 : `${styles.taskDescription}`
