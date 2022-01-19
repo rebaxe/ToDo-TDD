@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import EasyPoint from '../classes/EasyPoint'
-import PointClass from '../classes/Point'
-import MediumPoint from '../classes/MediumPoint'
-import HardPoint from '../classes/HardPoint'
+import EasyPoint from '../../classes/EasyPoint'
+import PointClass from '../../classes/Point'
+import MediumPoint from '../../classes/MediumPoint'
+import HardPoint from '../../classes/HardPoint'
 
 type Props = {
   point: PointClass

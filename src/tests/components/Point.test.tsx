@@ -2,7 +2,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import EasyPoint from '../../classes/EasyPoint'
-import Point from '../../components/Point'
+import Point from '../../components/Point/Point'
 import MediumPoint from '../../classes/MediumPoint'
 import HardPoint from '../../classes/HardPoint'
 
