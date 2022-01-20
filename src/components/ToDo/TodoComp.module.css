@@ -23,7 +23,7 @@
 .taskListWrapper {
   width: 80%;
   height: auto;
-  margin: 20px 0 110px;
+  margin: 0 0 110px;
   overflow-y: scroll;
 }
 
@@ -61,7 +61,7 @@
   border-radius: 50px;
   display: inline-flex;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease-in-out;
   margin: 8px 0;
   -webkit-tap-highlight-color: transparent;
   color: var(--color-offwhite);
