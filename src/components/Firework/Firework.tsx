@@ -5,7 +5,7 @@ import animationData from './lottie-firework.json'
 const animation = animationData
 
 const defaultOptions = {
-  loop: false,
+  loop: true,
   autoplay: true,
   animationData: animation,
   renderSettings: {
@@ -16,7 +16,7 @@ const defaultOptions = {
 function Firework() {
   return (
     <div>
-      <Lottie options={defaultOptions} width={50} height={50} />
+      <Lottie options={defaultOptions} width={100} height={100} />
     </div>
   )
 }
