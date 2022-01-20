@@ -23,7 +23,7 @@ beforeEach(() => {
 })
 
 describe('Point counter component', () => {
-  it('Counter should not show when no tasks', () => {
+  it('Progressbar should not show when no tasks', () => {
     jest.spyOn(mockPointCounter, 'getFinishedPoints').mockImplementation(() => 0)
     jest.spyOn(mockPointCounter, 'getMaxPoints').mockImplementation(() => 0)
     counterWrapper = shallow(<PointCounter pointCounter={mockPointCounter} />)
@@ -31,7 +31,7 @@ describe('Point counter component', () => {
     expect(counter).toHaveLength(0)
   })
 
-  it('Counter should present 0/1 points', () => {
+  it('Progressbar should show when tasks are listed', () => {
     jest.spyOn(mockPointCounter, 'getFinishedPoints').mockImplementation(() => 0)
     jest.spyOn(mockPointCounter, 'getMaxPoints').mockImplementation(() => 1)
     counterWrapper = shallow(<PointCounter pointCounter={mockPointCounter} />)
