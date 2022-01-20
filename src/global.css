@@ -67,18 +67,6 @@ button:hover:enabled {
   cursor: pointer;
 }
 
-.easyPoint {
-  color: var(--color-teal);
-}
-
-.mediumPoint {
-  color: var(--color-yellow);
-}
-
-.hardPoint {
-  color: var(--color-orange-primary);
-}
-
 li {
   display: flex;
   flex-direction: row;

@@ -1,0 +1,11 @@
+.easyPoint {
+  color: var(--color-teal);
+}
+
+.mediumPoint {
+  color: var(--color-yellow);
+}
+
+.hardPoint {
+  color: var(--color-orange-primary);
+}

@@ -26,21 +26,21 @@ function Point({ point }: Props): JSX.Element {
     <>
       {isEasy() && (
         <Tooltip delay="" direction="" content="Easy 🐥">
-          <span className="easyPoint">
+          <span className={styles.easyPoint}>
             <FontAwesomeIcon icon={faCircle} />
           </span>
         </Tooltip>
       )}
       {isMedium() && (
         <Tooltip delay="" direction="" content="Medium 🦆">
-          <span className="mediumPoint">
+          <span className={styles.mediumPoint}>
             <FontAwesomeIcon icon={faCircle} />
           </span>
         </Tooltip>
       )}
       {isHard() && (
         <Tooltip delay="" direction="" content="Hard 🦅">
-          <span className="hardPoint">
+          <span className={styles.hardPoint}>
             <FontAwesomeIcon icon={faCircle} />
           </span>
         </Tooltip>
