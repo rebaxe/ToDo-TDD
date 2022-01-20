@@ -20,7 +20,7 @@ function PointCounter({ pointCounter }: Props): JSX.Element {
   return (
     <div className={styles.pointCounterContainer}>
       {maxPoints > 0 && (
-        <div className={styles.pointCounterWrapper}>
+        <div className={`pointCounterWrapper ${styles.pointCounterWrapper}`}>
           <ProgressBar
             completed={percentage}
             fillColor="#e76f51"
